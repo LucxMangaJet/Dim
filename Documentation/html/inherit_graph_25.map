@@ -1,0 +1,4 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$class_dim_1_1_structures_1_1_transition.html" title="Used by StateMachine, base class for StateMachines Transitions. " alt="" coords="5,5,175,47"/>
+<area shape="rect" id="node2" href="$class_dim_1_1_player_1_1_player_state_transition.html" title="Used by the PlayerStateMachine, represents a Connection. " alt="" coords="223,13,437,39"/>
+</map>

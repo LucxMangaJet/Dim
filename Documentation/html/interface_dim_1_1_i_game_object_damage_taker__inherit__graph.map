@@ -1,0 +1,5 @@
+<map id="Dim.IGameObjectDamageTaker" name="Dim.IGameObjectDamageTaker">
+<area shape="rect" id="node2" href="$class_dim_1_1_enemies_1_1_core_drainer_controller.html" title="Responsible for the Behavior of a CoreDrainer. " alt="" coords="259,5,485,32"/>
+<area shape="rect" id="node3" href="$class_dim_1_1_enemies_1_1_pick_goat_controller.html" title="Responsible for the Behavior of a PickGoat. " alt="" coords="265,56,479,83"/>
+<area shape="rect" id="node4" href="$class_dim_1_1_player_1_1_player_controller.html" title="Centerpiece of the Player Behavior, controls Energy, damage taking and holds the PlayerStateMachine. " alt="" coords="281,107,463,133"/>
+</map>

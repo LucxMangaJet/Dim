@@ -1,0 +1,4 @@
+<map id="Dim.Level" name="Dim.Level">
+<area shape="rect" id="node2" href="$class_dim_1_1_check_point.html" title="Tells the LevelHandler to Update the Checkpoint reached when triggered by the Player. " alt="" coords="89,81,205,108"/>
+<area shape="rect" id="node4" href="$interface_dim_1_1_visualize_1_1_i_extra_visualization.html" title="Interface used to debug information visually using Gizmos. " alt="" coords="140,5,331,32"/>
+</map>

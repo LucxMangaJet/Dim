@@ -1,0 +1,6 @@
+<map id="Dim.Player.PlayerController" name="Dim.Player.PlayerController">
+<area shape="rect" id="node6" href="$class_dim_1_1_interaction_1_1_storage.html" title="Storage Behavior, can be linked to other Storages to have synced Energy Levels. " alt="" coords="255,67,414,94"/>
+<area shape="rect" id="node3" href="$interface_dim_1_1_i_game_object_damage_taker.html" title="Interface used to recieve damage. " alt="" coords="245,169,424,195"/>
+<area shape="rect" id="node4" href="$interface_dim_1_1_visualize_1_1_i_extra_visualization.html" title="Interface used to debug information visually using Gizmos. " alt="" coords="5,90,196,117"/>
+<area shape="rect" id="node5" href="$interface_dim_1_1_i_energy_object.html" title="Interface used by Energy using Elements, used by EnergyHandler to calculate detection. " alt="" coords="283,219,387,246"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node2" href="$class_dim_1_1_visualize_1_1_base_interaction_editor.html" title="Custom Editor for the BaseInteraction Script. " alt="" coords="115,5,311,47"/>
+<area shape="rect" id="node4" href="$class_dim_1_1_visualize_1_1_camera_transition_trigger_editor.html" title="Custom Editor for the CameraTransition Script. " alt="" coords="109,71,316,112"/>
+<area shape="rect" id="node5" href="$class_dim_1_1_visualize_1_1_porter_pipe_drawer_editor.html" title="Custom Editor for the PorterPipe Drawer. " alt="" coords="129,136,296,177"/>
+<area shape="rect" id="node6" href="$class_dim_1_1_visualize_1_1_pressure_plate_editor.html" title="Custom Editor for the PressurePlate. " alt="" coords="119,201,307,243"/>
+<area shape="rect" id="node3" href="$class_dim_1_1_visualize_1_1_platform_editor.html" title="Custom Editor for the Platform Class. " alt="" coords="364,13,552,39"/>
+</map>

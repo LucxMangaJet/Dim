@@ -1,0 +1,4 @@
+<map id="Dim.Enemies.RhinoTrainController" name="Dim.Enemies.RhinoTrainController">
+<area shape="rect" id="node3" href="$class_dim_1_1_ground_checker.html" title="Used by the Npcs AI to make sure they are not going to walk off an edge. " alt="" coords="98,81,237,108"/>
+<area shape="rect" id="node4" href="$interface_dim_1_1_visualize_1_1_i_extra_visualization.html" title="Interface used to debug information visually using Gizmos. " alt="" coords="140,5,331,32"/>
+</map>

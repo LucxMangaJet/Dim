@@ -1,0 +1,4 @@
+<map id="Dim.Enemies.PickGoatController" name="Dim.Enemies.PickGoatController">
+<area shape="rect" id="node3" href="$interface_dim_1_1_i_game_object_damage_taker.html" title="Interface used to recieve damage. " alt="" coords="141,5,319,32"/>
+<area shape="rect" id="node4" href="$interface_dim_1_1_i_energy_object.html" title="Interface used by Energy using Elements, used by EnergyHandler to calculate detection. " alt="" coords="343,5,447,32"/>
+</map>

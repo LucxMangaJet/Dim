@@ -1,0 +1,5 @@
+<map id="Dim.Interaction.RhinoTrainBase" name="Dim.Interaction.RhinoTrainBase">
+<area shape="rect" id="node2" href="$class_dim_1_1_interaction_1_1_interaction_base.html" title="Base Class for Interactions, establishes a connection to a Storage Object. " alt="" coords="91,80,203,107"/>
+<area shape="rect" id="node4" href="$interface_dim_1_1_visualize_1_1_i_extra_visualization.html" title="Interface used to debug information visually using Gizmos. " alt="" coords="140,5,331,32"/>
+<area shape="rect" id="node5" href="$interface_dim_1_1_i_sound_mechanic_taker.html" title="ISoundMechanicTaker" alt="" coords="228,80,379,107"/>
+</map>

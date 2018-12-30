@@ -1,0 +1,4 @@
+<map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
+<area shape="rect" id="node1" href="$interface_dim_1_1_i_bool_input.html" title="Used by the InputController, represents a form of Input that has 2 states, like a Keyboard key..." alt="" coords="5,5,112,32"/>
+<area shape="rect" id="node2" href="$class_dim_1_1_p_c_input.html" title="Used by the InputController, implements a IBoolInput from a keyboard. " alt="" coords="160,5,255,32"/>
+</map>

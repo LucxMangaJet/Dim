@@ -1,0 +1,6 @@
+<map id="Dim.Enemies.DetectionBatController" name="Dim.Enemies.DetectionBatController">
+<area shape="rect" id="node2" href="$class_dim_1_1_interaction_1_1_interaction_base.html" title="Base Class for Interactions, establishes a connection to a Storage Object. " alt="" coords="45,171,225,197"/>
+<area shape="rect" id="node5" href="$class_dim_1_1_interaction_1_1_storage.html" title="Storage Behavior, can be linked to other Storages to have synced Energy Levels. " alt="" coords="56,81,215,108"/>
+<area shape="rect" id="node4" href="$interface_dim_1_1_visualize_1_1_i_extra_visualization.html" title="Interface used to debug information visually using Gizmos. " alt="" coords="208,5,399,32"/>
+<area shape="rect" id="node6" href="$interface_dim_1_1_i_sound_mechanic_taker.html" title="ISoundMechanicTaker" alt="" coords="249,171,400,197"/>
+</map>

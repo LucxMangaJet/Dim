@@ -1,0 +1,4 @@
+<map id="Dim.IRangeInput" name="Dim.IRangeInput">
+<area shape="rect" id="node2" href="$class_dim_1_1_moblie_range_input.html" title="[UNIMPLEMENTED] Used by the InputController, implements a IRangeInput from a touchScreen. " alt="" coords="5,80,157,107"/>
+<area shape="rect" id="node3" href="$class_dim_1_1_p_c_range_input.html" title="Used by the InputController, implements a IRangeInput from a keyboard. " alt="" coords="182,80,314,107"/>
+</map>

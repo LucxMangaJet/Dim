@@ -1,0 +1,5 @@
+<map id="Dim.ISoundMechanicTaker" name="Dim.ISoundMechanicTaker">
+<area shape="rect" id="node2" href="$class_dim_1_1_enemies_1_1_core_drainer_controller.html" title="Responsible for the Behavior of a CoreDrainer. " alt="" coords="231,5,457,32"/>
+<area shape="rect" id="node3" href="$class_dim_1_1_enemies_1_1_detection_bat_controller.html" title="Responsible for the Behavior of a DetectionBat, is connected to a Storage. " alt="" coords="255,57,433,98"/>
+<area shape="rect" id="node4" href="$class_dim_1_1_interaction_1_1_rhino_train_base.html" title="Base for the RhinoTrain, connects to a Storage to activate/deactivate the RhinoTrain when detecting s..." alt="" coords="242,123,446,149"/>
+</map>

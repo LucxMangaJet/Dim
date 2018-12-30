@@ -1,0 +1,5 @@
+<map id="Dim.Player.PlayerController" name="Dim.Player.PlayerController">
+<area shape="rect" id="node3" href="$interface_dim_1_1_i_game_object_damage_taker.html" title="Interface used to recieve damage. " alt="" coords="141,5,319,32"/>
+<area shape="rect" id="node4" href="$interface_dim_1_1_visualize_1_1_i_extra_visualization.html" title="Interface used to debug information visually using Gizmos. " alt="" coords="344,5,535,32"/>
+<area shape="rect" id="node5" href="$interface_dim_1_1_i_energy_object.html" title="Interface used by Energy using Elements, used by EnergyHandler to calculate detection. " alt="" coords="559,5,663,32"/>
+</map>

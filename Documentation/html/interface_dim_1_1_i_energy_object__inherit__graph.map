@@ -1,0 +1,6 @@
+<map id="Dim.IEnergyObject" name="Dim.IEnergyObject">
+<area shape="rect" id="node2" href="$class_dim_1_1_enemies_1_1_core_drainer_controller.html" title="Responsible for the Behavior of a CoreDrainer. " alt="" coords="184,5,411,32"/>
+<area shape="rect" id="node3" href="$class_dim_1_1_enemies_1_1_pick_goat_controller.html" title="Responsible for the Behavior of a PickGoat. " alt="" coords="191,56,404,83"/>
+<area shape="rect" id="node4" href="$class_dim_1_1_energy_area.html" title="EnergyObject that is spawned both by the Player when Emitting freely and by Enemies on Death..." alt="" coords="239,107,356,133"/>
+<area shape="rect" id="node5" href="$class_dim_1_1_player_1_1_player_controller.html" title="Centerpiece of the Player Behavior, controls Energy, damage taking and holds the PlayerStateMachine. " alt="" coords="206,157,389,184"/>
+</map>

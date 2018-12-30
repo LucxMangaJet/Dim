@@ -1,0 +1,12 @@
+<map id="Dim.Interaction.InteractionBase" name="Dim.Interaction.InteractionBase">
+<area shape="rect" id="node4" href="$class_dim_1_1_enemies_1_1_detection_bat_controller.html" title="Responsible for the Behavior of a DetectionBat, is connected to a Storage. " alt="" coords="507,5,686,47"/>
+<area shape="rect" id="node5" href="$class_dim_1_1_enemies_1_1_laser_turret.html" title="Responsible for the Behavior of a LaserTurret, inherits from InteractionBase like other gameplay elem..." alt="" coords="512,71,681,98"/>
+<area shape="rect" id="node6" href="$class_dim_1_1_interaction_1_1_animation_motor.html" title="Used to toggle Animations based on Storage Energy Level. " alt="" coords="511,123,682,164"/>
+<area shape="rect" id="node7" href="$class_dim_1_1_interaction_1_1_door.html" title="Door component that opens dependent on a Storage. " alt="" coords="527,189,667,215"/>
+<area shape="rect" id="node8" href="$class_dim_1_1_interaction_1_1_platform.html" title="Behavior script for Platforms. " alt="" coords="516,239,677,266"/>
+<area shape="rect" id="node9" href="$class_dim_1_1_interaction_1_1_porter_pipe_blocker.html" title="[OUTDATED] Used to created gating withing PorterPipes. " alt="" coords="509,291,684,332"/>
+<area shape="rect" id="node10" href="$class_dim_1_1_interaction_1_1_porter_pipe_entrance.html" title="Deals with Transporting the Player through a PorterPipe System. " alt="" coords="509,356,684,397"/>
+<area shape="rect" id="node11" href="$class_dim_1_1_interaction_1_1_rhino_train_base.html" title="Base for the RhinoTrain, connects to a Storage to activate/deactivate the RhinoTrain when detecting s..." alt="" coords="495,422,699,449"/>
+<area shape="rect" id="node12" href="$class_dim_1_1_interaction_1_1_script_starter_motor.html" title="Used to toggle Scripts based on Storage Energy Level. " alt="" coords="503,473,690,515"/>
+<area shape="rect" id="node3" href="$interface_dim_1_1_visualize_1_1_i_extra_visualization.html" title="Interface used to debug information visually using Gizmos. " alt="" coords="5,265,196,291"/>
+</map>

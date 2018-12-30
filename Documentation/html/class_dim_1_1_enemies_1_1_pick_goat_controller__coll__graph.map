@@ -1,0 +1,6 @@
+<map id="Dim.Enemies.PickGoatController" name="Dim.Enemies.PickGoatController">
+<area shape="rect" id="node5" href="$class_dim_1_1_ground_checker.html" title="Used by the Npcs AI to make sure they are not going to walk off an edge. " alt="" coords="98,81,237,108"/>
+<area shape="rect" id="node3" href="$interface_dim_1_1_i_game_object_damage_taker.html" title="Interface used to recieve damage. " alt="" coords="261,81,439,108"/>
+<area shape="rect" id="node4" href="$interface_dim_1_1_i_energy_object.html" title="Interface used by Energy using Elements, used by EnergyHandler to calculate detection. " alt="" coords="463,81,567,108"/>
+<area shape="rect" id="node6" href="$interface_dim_1_1_visualize_1_1_i_extra_visualization.html" title="Interface used to debug information visually using Gizmos. " alt="" coords="140,5,331,32"/>
+</map>

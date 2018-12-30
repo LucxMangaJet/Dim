@@ -1,0 +1,4 @@
+<map id="Dim.Interaction.InteractionBase" name="Dim.Interaction.InteractionBase">
+<area shape="rect" id="node4" href="$class_dim_1_1_interaction_1_1_storage.html" title="Storage Behavior, can be linked to other Storages to have synced Energy Levels. " alt="" coords="56,81,215,108"/>
+<area shape="rect" id="node3" href="$interface_dim_1_1_visualize_1_1_i_extra_visualization.html" title="Interface used to debug information visually using Gizmos. " alt="" coords="208,5,399,32"/>
+</map>

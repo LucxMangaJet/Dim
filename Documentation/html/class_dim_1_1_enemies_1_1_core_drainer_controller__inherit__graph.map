@@ -1,0 +1,6 @@
+<map id="Dim.Enemies.CoreDrainerController" name="Dim.Enemies.CoreDrainerController">
+<area shape="rect" id="node3" href="$interface_dim_1_1_i_game_object_damage_taker.html" title="Interface used to recieve damage. " alt="" coords="11,56,190,83"/>
+<area shape="rect" id="node4" href="$interface_dim_1_1_i_sound_mechanic_taker.html" title="ISoundMechanicTaker" alt="" coords="25,107,176,133"/>
+<area shape="rect" id="node5" href="$interface_dim_1_1_i_energy_object.html" title="Interface used by Energy using Elements, used by EnergyHandler to calculate detection. " alt="" coords="49,157,153,184"/>
+<area shape="rect" id="node6" href="$interface_dim_1_1_visualize_1_1_i_extra_visualization.html" title="Interface used to debug information visually using Gizmos. " alt="" coords="5,208,196,235"/>
+</map>

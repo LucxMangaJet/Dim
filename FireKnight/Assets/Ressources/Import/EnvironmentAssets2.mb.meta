@@ -1,0 +1,210 @@
+fileFormatVersion: 2
+guid: 9456eee59be05684ba51286a89b8cb0f
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: bracket_low
+    100002: //RootNode
+    100004: lightsource_low
+    100006: piston_base
+    100008: piston_slider1
+    100010: piston_slider2
+    100012: piston_top
+    100014: railing_low
+    100016: wheel2_low
+    100018: wall1
+    100020: wall1_quarter
+    100022: chain_flat
+    100024: chain_high
+    100026: pillar1_high
+    100028: pillar1_low
+    100030: pillar1_verylow
+    100032: plane_big
+    100034: crates
+    100036: oil_plane
+    100038: pasted__platform_4x4_hole
+    100040: railing_round
+    100042: railing_broken_bend
+    100044: wall_long_flat
+    100046: wall_giant
+    400000: bracket_low
+    400002: //RootNode
+    400004: lightsource_low
+    400006: piston_base
+    400008: piston_slider1
+    400010: piston_slider2
+    400012: piston_top
+    400014: railing_low
+    400016: wheel2_low
+    400018: wall1
+    400020: wall1_quarter
+    400022: chain_flat
+    400024: chain_high
+    400026: pillar1_high
+    400028: pillar1_low
+    400030: pillar1_verylow
+    400032: plane_big
+    400034: crates
+    400036: oil_plane
+    400038: pasted__platform_4x4_hole
+    400040: railing_round
+    400042: railing_broken_bend
+    400044: wall_long_flat
+    400046: wall_giant
+    2100000: lambert1
+    2100002: lambert2
+    2100004: lambert3
+    2100006: lambert4
+    2100008: pasted__lambert4
+    2300000: bracket_low
+    2300002: lightsource_low
+    2300004: piston_base
+    2300006: piston_slider1
+    2300008: piston_slider2
+    2300010: piston_top
+    2300012: railing_low
+    2300014: wheel2_low
+    2300016: wall1
+    2300018: wall1_quarter
+    2300020: chain_flat
+    2300022: chain_high
+    2300024: pillar1_high
+    2300026: pillar1_low
+    2300028: pillar1_verylow
+    2300030: plane_big
+    2300032: crates
+    2300034: oil_plane
+    2300036: pasted__platform_4x4_hole
+    2300038: railing_round
+    2300040: railing_broken_bend
+    2300042: wall_long_flat
+    2300044: wall_giant
+    3300000: bracket_low
+    3300002: lightsource_low
+    3300004: piston_base
+    3300006: piston_slider1
+    3300008: piston_slider2
+    3300010: piston_top
+    3300012: railing_low
+    3300014: wheel2_low
+    3300016: wall1
+    3300018: wall1_quarter
+    3300020: chain_flat
+    3300022: chain_high
+    3300024: pillar1_high
+    3300026: pillar1_low
+    3300028: pillar1_verylow
+    3300030: plane_big
+    3300032: crates
+    3300034: oil_plane
+    3300036: pasted__platform_4x4_hole
+    3300038: railing_round
+    3300040: railing_broken_bend
+    3300042: wall_long_flat
+    3300044: wall_giant
+    4300000: wheel2_low
+    4300002: railing_low
+    4300004: lightsource_low
+    4300006: bracket_low
+    4300008: piston_base
+    4300010: piston_slider1
+    4300012: piston_slider2
+    4300014: piston_top
+    4300016: wall1
+    4300018: wall1_quarter
+    4300020: chain_high
+    4300022: chain_flat
+    4300024: pillar1_low
+    4300026: pillar1_high
+    4300028: pillar1_verylow
+    4300030: plane_big
+    4300032: crates
+    4300034: oil_plane
+    4300036: pasted__platform_4x4_hole
+    4300038: railing_round
+    4300040: railing_broken_bend
+    4300042: wall_long_flat
+    4300044: wall_giant
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 1
+    hasPreviousCalculatedGlobalScale: 0
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 0
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

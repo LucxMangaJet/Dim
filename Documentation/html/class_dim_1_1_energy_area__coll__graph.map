@@ -1,0 +1,4 @@
+<map id="Dim.EnergyArea" name="Dim.EnergyArea">
+<area shape="rect" id="node3" href="$interface_dim_1_1_i_energy_object.html" title="Interface used by Energy using Elements, used by EnergyHandler to calculate detection. " alt="" coords="141,5,245,32"/>
+<area shape="rect" id="node4" href="$interface_dim_1_1_visualize_1_1_i_extra_visualization.html" title="Interface used to debug information visually using Gizmos. " alt="" coords="269,5,460,32"/>
+</map>

@@ -1,0 +1,23 @@
+<map id="Dim.Visualize.IExtraVisualization" name="Dim.Visualize.IExtraVisualization">
+<area shape="rect" id="node2" href="$class_dim_1_1_check_point.html" title="Tells the LevelHandler to Update the Checkpoint reached when triggered by the Player. " alt="" coords="323,5,439,32"/>
+<area shape="rect" id="node3" href="$class_dim_1_1_enemies_1_1_core_drainer_controller.html" title="Responsible for the Behavior of a CoreDrainer. " alt="" coords="268,56,495,83"/>
+<area shape="rect" id="node4" href="$class_dim_1_1_enemies_1_1_laser_turret.html" title="Responsible for the Behavior of a LaserTurret, inherits from InteractionBase like other gameplay elem..." alt="" coords="560,11,729,37"/>
+<area shape="rect" id="node5" href="$class_dim_1_1_energy_area.html" title="EnergyObject that is spawned both by the Player when Emitting freely and by Enemies on Death..." alt="" coords="323,309,440,336"/>
+<area shape="rect" id="node6" href="$class_dim_1_1_ground_checker.html" title="Used by the Npcs AI to make sure they are not going to walk off an edge. " alt="" coords="312,360,451,387"/>
+<area shape="rect" id="node7" href="$class_dim_1_1_interaction_1_1_door.html" title="Door component that opens dependent on a Storage. " alt="" coords="575,61,715,88"/>
+<area shape="rect" id="node8" href="$class_dim_1_1_interaction_1_1_interaction_base.html" title="Base Class for Interactions, establishes a connection to a Storage Object. " alt="" coords="280,208,483,235"/>
+<area shape="rect" id="node13" href="$class_dim_1_1_interaction_1_1_porter_pipe_entrance.html" title="Deals with Transporting the Player through a PorterPipe System. " alt="" coords="557,478,732,519"/>
+<area shape="rect" id="node16" href="$class_dim_1_1_interaction_1_1_porter_pipe_section.html" title="Base Component to form PorterPipe Systems. " alt="" coords="294,411,469,453"/>
+<area shape="rect" id="node17" href="$class_dim_1_1_interaction_1_1_simple_movemenet_motor.html" title="[OUTDATED] Used to move Visual Assets based on Storage Energy Levels " alt="" coords="272,477,491,518"/>
+<area shape="rect" id="node18" href="$class_dim_1_1_interaction_1_1_storage.html" title="Storage Behavior, can be linked to other Storages to have synced Energy Levels. " alt="" coords="302,543,461,569"/>
+<area shape="rect" id="node19" href="$class_dim_1_1_physical_damage_dealer.html" title="[OUTDATED] Used to deal damage. " alt="" coords="289,593,473,620"/>
+<area shape="rect" id="node20" href="$class_dim_1_1_player_1_1_player_controller.html" title="Centerpiece of the Player Behavior, controls Energy, damage taking and holds the PlayerStateMachine. " alt="" coords="290,644,473,671"/>
+<area shape="rect" id="node21" href="$class_dim_1_1_player_1_1_player_foot_sound_emission.html" title="Attached to both of the Players Feet Joints, emits a step sound on collision. " alt="" coords="286,695,477,737"/>
+<area shape="rect" id="node22" href="$class_dim_1_1_visualize_1_1_gizmos_static_text_displayer.html" title="Displays a simple given text over the Object in combination with ExtraGizmosVisualization. " alt="" coords="289,761,474,802"/>
+<area shape="rect" id="node9" href="$class_dim_1_1_enemies_1_1_detection_bat_controller.html" title="Responsible for the Behavior of a DetectionBat, is connected to a Storage. " alt="" coords="555,295,734,337"/>
+<area shape="rect" id="node10" href="$class_dim_1_1_interaction_1_1_animation_motor.html" title="Used to toggle Animations based on Storage Energy Level. " alt="" coords="559,361,730,402"/>
+<area shape="rect" id="node11" href="$class_dim_1_1_interaction_1_1_platform.html" title="Behavior script for Platforms. " alt="" coords="564,427,725,453"/>
+<area shape="rect" id="node12" href="$class_dim_1_1_interaction_1_1_porter_pipe_blocker.html" title="[OUTDATED] Used to created gating withing PorterPipes. " alt="" coords="557,113,732,154"/>
+<area shape="rect" id="node14" href="$class_dim_1_1_interaction_1_1_rhino_train_base.html" title="Base for the RhinoTrain, connects to a Storage to activate/deactivate the RhinoTrain when detecting s..." alt="" coords="543,179,747,205"/>
+<area shape="rect" id="node15" href="$class_dim_1_1_interaction_1_1_script_starter_motor.html" title="Used to toggle Scripts based on Storage Energy Level. " alt="" coords="551,230,738,271"/>
+</map>
