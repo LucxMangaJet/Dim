@@ -28939,16 +28939,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 114825389821888954, guid: e6e34fd32ea617a43a7183ecaf388848,
-        type: 2}
-      propertyPath: MovementSpeedCap
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 199253171955281464, guid: e6e34fd32ea617a43a7183ecaf388848,
         type: 2}
-      propertyPath: m_Materials.Array.data[0]
+      propertyPath: m_Materials.Array.data[1]
       value: 
-      objectReference: {fileID: 2100000, guid: e9e01aabe977e774eabd4df090c8e303, type: 2}
+      objectReference: {fileID: 2100000, guid: 089559cae7127c74db51ffd1522a5c82, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6e34fd32ea617a43a7183ecaf388848, type: 2}
   m_IsPrefabAsset: 0
