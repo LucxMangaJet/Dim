@@ -1,0 +1,199 @@
+fileFormatVersion: 2
+guid: 2fb7f9939aae72146ae5e52af25284f1
+ModelImporter:
+  serializedVersion: 23
+  fileIDToRecycleName:
+    100000: Ctrl_arm_L
+    100002: Ctrl_arm_R
+    100004: Ctrl_elbow_L
+    100006: Ctrl_elbow_R
+    100008: Ctrl_foot_L
+    100010: Ctrl_foot_R
+    100012: Ctrl_head
+    100014: Ctrl_lower_knee_L
+    100016: Ctrl_lower_knee_R
+    100018: Ctrl_pelvis
+    100020: Ctrl_special_Chest
+    100022: Ctrl_upper_knee_L
+    100024: Ctrl_upper_knee_R
+    100026: group1
+    100028: ikHandle6
+    100030: ikHandle7
+    100032: ikHandle8
+    100034: ikHandle9
+    100036: ikHandle_Arm_L
+    100038: ikHandle_Arm_R
+    100040: ikHandle_lower_leg_L
+    100042: ikHandle_lower_leg_R
+    100044: ikHandle_upper_leg_L
+    100046: ikHandle_upper_leg_R
+    100048: joint1
+    100050: joint2
+    100052: joint3
+    100054: joint4
+    100056: joint_arm_hoof_L
+    100058: joint_arm_hoof_R
+    100060: joint_Chest
+    100062: joint_Chest_Special
+    100064: joint_elbow_L
+    100066: joint_elbow_R
+    100068: joint_Head
+    100070: joint_hip_L
+    100072: joint_hip_R
+    100074: joint_invert_knee_L
+    100076: joint_invert_knee_R
+    100078: joint_knee_L
+    100080: joint_knee_R
+    100082: joint_leg_hoof_L
+    100084: joint_leg_hoof_R
+    100086: joint_pelvis
+    100088: joint_shoulder_L
+    100090: joint_shoulder_R
+    100092: lowpoli
+    100094: nurbsCircle1
+    100096: nurbsCircle2
+    100098: nurbsCircle3
+    100100: nurbsCircle4
+    100102: //RootNode
+    400000: Ctrl_arm_L
+    400002: Ctrl_arm_R
+    400004: Ctrl_elbow_L
+    400006: Ctrl_elbow_R
+    400008: Ctrl_foot_L
+    400010: Ctrl_foot_R
+    400012: Ctrl_head
+    400014: Ctrl_lower_knee_L
+    400016: Ctrl_lower_knee_R
+    400018: Ctrl_pelvis
+    400020: Ctrl_special_Chest
+    400022: Ctrl_upper_knee_L
+    400024: Ctrl_upper_knee_R
+    400026: group1
+    400028: ikHandle6
+    400030: ikHandle7
+    400032: ikHandle8
+    400034: ikHandle9
+    400036: ikHandle_Arm_L
+    400038: ikHandle_Arm_R
+    400040: ikHandle_lower_leg_L
+    400042: ikHandle_lower_leg_R
+    400044: ikHandle_upper_leg_L
+    400046: ikHandle_upper_leg_R
+    400048: joint1
+    400050: joint2
+    400052: joint3
+    400054: joint4
+    400056: joint_arm_hoof_L
+    400058: joint_arm_hoof_R
+    400060: joint_Chest
+    400062: joint_Chest_Special
+    400064: joint_elbow_L
+    400066: joint_elbow_R
+    400068: joint_Head
+    400070: joint_hip_L
+    400072: joint_hip_R
+    400074: joint_invert_knee_L
+    400076: joint_invert_knee_R
+    400078: joint_knee_L
+    400080: joint_knee_R
+    400082: joint_leg_hoof_L
+    400084: joint_leg_hoof_R
+    400086: joint_pelvis
+    400088: joint_shoulder_L
+    400090: joint_shoulder_R
+    400092: lowpoli
+    400094: nurbsCircle1
+    400096: nurbsCircle2
+    400098: nurbsCircle3
+    400100: nurbsCircle4
+    400102: //RootNode
+    2100000: lambert2
+    2100002: phong5
+    2100004: StingrayPBS1
+    4300000: lowpoli
+    7400000: PC_picking_Anim
+    9500000: //RootNode
+    13700000: lowpoli
+    2186277476908879412: ImportLogs
+  externalObjects: {}
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+    materialLocation: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    rigImportErrors: 
+    rigImportWarnings: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    importAnimatedCustomProperties: 0
+    importConstraints: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    extraUserProperties: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importVisibility: 1
+    importBlendShapes: 1
+    importCameras: 1
+    importLights: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    preserveHierarchy: 0
+    indexFormat: 0
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+    previousCalculatedGlobalScale: 0.01
+    hasPreviousCalculatedGlobalScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+    normalCalculationMode: 4
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
