@@ -23,10 +23,6 @@ void Update() ///when Menu finished, DELETE this Updatefunction
             DoorOpening();
 
         }
-        if (Isopening == true)
-        {
-            DoorOpening();
-        }
     }
 
     public void DoorOpening()
