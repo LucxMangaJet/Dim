@@ -12,7 +12,7 @@ namespace Dim.Visualize
     {
         public const float SPEED_MULTIPLYER = 15;
         public const float MAX_LOUNDNESS = 10;
-        public const float FIXED_SIZE = 5;
+        public const float FIXED_SIZE = 1;
         public float Loudness = 0;
         public float ExpansionLeft = 0;
         public float CurrentSize = 0;

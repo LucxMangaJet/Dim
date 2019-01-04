@@ -55,7 +55,7 @@ namespace Dim.Enemies
 
                 if (Mathf.Abs(rb.velocity.x)>0.1)
                 {
-                    transform.forward = new Vector3(rb.velocity.x, 0, 0);
+                    transform.forward = new Vector3(-rb.velocity.x, 0, 0);
                 }
                 
             }

@@ -35,7 +35,7 @@ namespace Dim.Player
             if (other.tag == "Untagged" && Time.time-timeStamp >cooldown)
             {
                 timeStamp = Time.time;
-                SoundMechanicHandler.PlaySound(transform, transform.position, Loudness, Range);
+                SoundMechanicHandler.PlaySound(transform, transform.position, Loudness, Range,false);
                 source.volume = Loudness / 10;
                 source.Play();
             }

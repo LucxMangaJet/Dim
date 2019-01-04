@@ -60,7 +60,7 @@ namespace Dim.Enemies
         private void Play()
         {
             audioSource.Play();
-            SoundMechanicHandler.PlaySound(transform, transform.position, repetitionLoudness, repetitionRange);
+            SoundMechanicHandler.PlaySound(transform, transform.position, repetitionLoudness, repetitionRange,true);
             light.enabled = true;
             Invoke("DisableLight", 1);
         }
