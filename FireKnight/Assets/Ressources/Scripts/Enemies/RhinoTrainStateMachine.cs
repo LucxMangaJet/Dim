@@ -78,7 +78,8 @@ namespace Dim.Enemies
 
         private void InBaseUpdate()
         {
-
+            if (firstFrameOfStateChange)
+                c.SetAnimatorWalkBack(false);
         }
 
         private bool InBaseToCharge()
@@ -88,6 +89,10 @@ namespace Dim.Enemies
 
         private void ChargeUpdate()
         {
+            if (firstFrameOfStateChange)
+            {
+                c.SetAnimatorWalk(true);
+            }
             MoveSideWaysInDirection(c.rhinoTrainBase.target.x > c.transform.position.x);
         }
 
@@ -113,6 +118,7 @@ namespace Dim.Enemies
             {
                 timeStamp = Time.time;
                 c.rb.velocity = Vector3.zero;
+                c.SetAnimatorWalk(false);
             }
         }
 
@@ -127,6 +133,10 @@ namespace Dim.Enemies
         
         private void WalkBackUpdate()
         {
+            if (firstFrameOfStateChange)
+            {
+                c.SetAnimatorWalkBack(true);
+            }
             MoveSideWaysInDirection(c.transform.position.x < c.rhinoTrainBase.transform.position.x);
         }
 
