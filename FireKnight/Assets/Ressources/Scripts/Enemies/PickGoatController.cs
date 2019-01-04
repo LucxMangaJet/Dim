@@ -63,10 +63,14 @@ namespace Dim.Enemies
 
         public void Destroy()
         {
+            if (isDestroyed)
+            {
+                return;
+            }
             isDestroyed = true;
             OnDestroyed?.Invoke();
             rb.isKinematic = true;
-            Destroy(GetComponent<BoxCollider>());
+            Destroy(GetComponent<Collider>());
             Destroy(headDamageCollider);
             audioSource.clip = deathSound;
             audioSource.Play();
