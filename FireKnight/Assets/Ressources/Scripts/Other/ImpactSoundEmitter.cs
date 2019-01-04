@@ -23,7 +23,7 @@ namespace Dim
 
 		private void OnCollisionEnter(Collision collision)
         {
-            SoundMechanicHandler.PlaySound(transform, collision.contacts[0].point, Mathf.Min(10, collision.relativeVelocity.magnitude/4), impactSoundRange);
+            SoundMechanicHandler.PlaySound(transform, collision.contacts[0].point, Mathf.Min(10, collision.relativeVelocity.magnitude/4), impactSoundRange,true);
 			 source.Play();
         }
        

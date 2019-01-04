@@ -55,9 +55,13 @@ namespace Dim
         }
 
 
-        public static void PlaySound(Transform source, Vector3 origin, float loudness, float range)
+        public static void PlaySound(Transform source, Vector3 origin, float loudness, float range, bool visulize)
         {
-            PlayVisualSound(origin, loudness, range);
+            if (visulize)
+            {
+                PlayVisualSound(origin, loudness, range);
+            }
+
             CallHearingMethodsOnListeners(source, origin, loudness, range);
         }
 
@@ -65,7 +69,16 @@ namespace Dim
         {
             GameObject s = GameObject.Instantiate(PrefabHolder.SoundElement(), origin, Quaternion.identity);
             SoundElement sE = s.GetComponent<SoundElement>();
+            sE.Setup(loudness, range);
+        }
+
+        [System.Obsolete("Method should be dropped for limided effectiveness.")]
+        public static void PlayVisualSound(Vector3 origin, float loudness)
+        {
+            GameObject s = GameObject.Instantiate(PrefabHolder.SoundElement(), origin, Quaternion.identity);
+            SoundElement sE = s.GetComponent<SoundElement>();
             sE.Setup(loudness);
+
         }
 
         public static void AddListener(Transform t)
