@@ -56,6 +56,8 @@ ModelImporter:
     100100: tube_straight_short_low5
     100102: tube_straight_short_low6
     100104: tube_straight_short_low7
+    100106: rack_empty
+    100108: rack_1
     400000: base_high
     400002: base_low
     400004: base_low1
@@ -109,6 +111,8 @@ ModelImporter:
     400100: tube_straight_short_low5
     400102: tube_straight_short_low6
     400104: tube_straight_short_low7
+    400106: rack_empty
+    400108: rack_1
     2100000: lambert1
     2100002: lambert2
     2100004: lambert3
@@ -147,6 +151,8 @@ ModelImporter:
     2300052: tube_straight_short_low
     2300054: //RootNode
     2300056: balcony1
+    2300058: rack_empty
+    2300060: rack_1
     3300000: base_high
     3300002: base_low
     3300004: base_low1
@@ -176,6 +182,8 @@ ModelImporter:
     3300052: tube_straight_short_low
     3300054: //RootNode
     3300056: balcony1
+    3300058: rack_empty
+    3300060: rack_1
     4300000: tank_low
     4300002: tank_high
     4300004: base_low
@@ -204,6 +212,8 @@ ModelImporter:
     4300050: gear_low
     4300052: gear_high
     4300054: balcony1
+    4300056: rack_empty
+    4300058: rack_1
   externalObjects: {}
   materials:
     importMaterials: 0
@@ -276,6 +286,7 @@ ModelImporter:
     legStretch: 0.05
     feetSpacing: 0
     rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
     hasTranslationDoF: 0
     hasExtraRoot: 0
     skeletonHasParents: 1
