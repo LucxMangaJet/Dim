@@ -92,6 +92,7 @@ namespace Dim.Enemies
             if (firstFrameOfStateChange)
             {
                 c.SetAnimatorWalk(true);
+                c.source.Play();
             }
             MoveSideWaysInDirection(c.rhinoTrainBase.target.x > c.transform.position.x);
         }

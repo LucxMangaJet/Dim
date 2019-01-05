@@ -22,12 +22,15 @@ namespace Dim.Enemies {
         [HideInInspector] public bool MoveDirectionIsRight; 
         [HideInInspector] public GroundChecker groundChecker;
         Animator animator;
+        [HideInInspector] public AudioSource source;
 
         private void Start()
         {
             transform.position = rhinoTrainBase.transform.position;
             rb = GetComponent<Rigidbody>();
             animator = GetComponent<Animator>();
+            source = GetComponent<AudioSource>();
+
             groundChecker = GetComponentInChildren<GroundChecker>();
             sM = new RhinoTrainStateMachine(this);
             rhinoTrainBase.OnSoundHeard += CatchActivation;
