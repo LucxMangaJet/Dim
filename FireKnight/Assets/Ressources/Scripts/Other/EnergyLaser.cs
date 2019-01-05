@@ -42,12 +42,12 @@ namespace Dim.Visualize {
         Vector3 GetEndPosition()
         {
             RaycastHit hit;
-            if (Physics.Raycast(transform.position, transform.right, out hit, -maxDistance)){
-                return hit.point + transform.right*-3;
+            if (Physics.Raycast(transform.position, Vector3.down, out hit, maxDistance)){
+                return hit.point + Vector3.down * maxDistance;
             }
             else
             {
-                return transform.position + (-maxDistance * transform.right);
+                return transform.position + (maxDistance * Vector3.down);
             }
         }
 
