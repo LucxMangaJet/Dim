@@ -23,6 +23,7 @@ namespace Dim.Enemies {
         AudioSource audioSource;
         Animator animator;
         EnergyDetectionLook visualizer;
+        Transform laserTurretTipPosiiton;
         [SerializeField] AudioClip shootingSound;
 
         List<Transform> objectsShot = new List<Transform>();
@@ -48,6 +49,12 @@ namespace Dim.Enemies {
             audioSource = GetComponent<AudioSource>();
             animator = GetComponent<Animator>();
             visualizer = GetComponent<EnergyDetectionLook>();
+
+            laserTurretTipPosiiton = transform;
+            while (laserTurretTipPosiiton.name != "Tip")
+            {
+                laserTurretTipPosiiton = laserTurretTipPosiiton.GetChild(0);
+            }
         }
 
         private void Update()
@@ -60,7 +67,7 @@ namespace Dim.Enemies {
                 {
                     if (!objectsShot.Contains(t))
                     {
-                        Instantiate(PrefabHolder.EnergyLaser(), transform.position + Vector3.forward, transform.rotation);
+                        Instantiate(PrefabHolder.EnergyLaser(), laserTurretTipPosiiton.position, Quaternion.Euler(Vector3.right*90f));
                         audioSource.clip = shootingSound;
                         audioSource.Play();
                         animator.SetTrigger("Shoot");
