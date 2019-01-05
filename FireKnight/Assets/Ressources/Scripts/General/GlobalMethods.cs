@@ -127,7 +127,7 @@ namespace Dim
                 Debug.LogError("UserData not found, creating Blank.");
                 UserData ud = new UserData();
                 ud.CompletedGame = false;
-                ud.LevelsUnlocked = 1;
+                ud.LevelsUnlocked = 2;
                 SaveUserData(ud);
                 
                 return ud;
@@ -164,7 +164,13 @@ namespace Dim
         public static void LoadSceneAndSaveProgress(int buildIndex)
         {
             Debug.Log("Loading Scene " + GetSceneNameFromBuildIndex(buildIndex) + ".");
-
+            UserData ud = LoadUserDataFromFile();
+            if (buildIndex > ud.LevelsUnlocked)
+            {
+                ud.LevelsUnlocked = buildIndex;
+                SaveUserData(ud);
+            }
+           
         }
 
 

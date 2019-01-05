@@ -23,14 +23,23 @@ namespace Dim.Menu
         Resolution[] resolutions;
 
         string[] levelScenesNames;
+        UserData userData;
 
         void Start()
         {
+            //CheckIfInRightMenu
+            userData = GlobalMethods.LoadUserDataFromFile();
+            if (userData.CompletedGame)
+            {
+                GlobalMethods.LoadSceneFromName("ENdindMEnu");
+            }
+
             //resDropdown
             resolutions = Screen.resolutions;
             resDropdown.ClearOptions();
             List<string> options = new List<string>();
             int myResIndx = 0;
+
             foreach (Resolution r in resolutions)
             {
                 if (r.width == Screen.currentResolution.width && r.height == Screen.currentResolution.height)
@@ -122,7 +131,7 @@ namespace Dim.Menu
         {
             List<string> scenes = new List<string>();
 
-            for (int i = 0; i < SceneManager.sceneCountInBuildSettings; i++)
+            for (int i = 0; i <= userData.LevelsUnlocked; i++)
             {
                 string s = System.IO.Path.GetFileNameWithoutExtension(SceneUtility.GetScenePathByBuildIndex(i));
                     
