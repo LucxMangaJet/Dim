@@ -318,6 +318,7 @@ namespace Dim.Enemies
                 cooldownTimeStamp = Time.time;
                 controller.AbsorptionArea.SetActive(false);
                 controller.DrainFlow.Active = false;
+                controller.StopSound();
             }
 
 

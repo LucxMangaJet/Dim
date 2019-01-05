@@ -199,7 +199,7 @@ namespace Dim.Enemies
 
         public void PlayAbsorbtionSound()
         {
-            audioSource.loop = false;
+            audioSource.loop = true;
             audioSource.clip = succSound;
             audioSource.Play();
         }
@@ -211,6 +211,10 @@ namespace Dim.Enemies
             audioSource.Play();
         }
         
+        public void StopSound()
+        {
+            audioSource.Stop();
+        }
     }
 
 
