@@ -17,6 +17,7 @@ namespace Dim
     public static class GlobalMethods 
     {
         public static string SAVEFILE_PATH = Application.persistentDataPath + "/SaveFile";
+        public static string USERDATA_PATH = Application.persistentDataPath + "/UserData";
 
         public static void QuitGame()
         {
@@ -101,6 +102,62 @@ namespace Dim
         public static bool SaveFileExists()
         {
             return File.Exists(SAVEFILE_PATH);
+        }
+
+
+        public static void SaveUserData(UserData ud)
+        {
+
+
+            BinaryFormatter bf = new BinaryFormatter();
+            MemoryStream ms = new MemoryStream();
+            bf.Serialize(ms, ud);
+            byte[] bytz = ms.ToArray();
+            FileStream file = File.Create(USERDATA_PATH);
+            file.Write(bytz, 0, bytz.Length);
+            file.Close();
+            Debug.Log("User Data saved successfully.");
+        }
+
+        public static UserData LoadUserDataFromFile()
+        {
+            if (!UserDataExists())
+            {
+                Debug.LogError("UserData not found, creating Blank.");
+                UserData ud = new UserData();
+                ud.CompletedGame = false;
+                ud.LevelsUnlocked = 1;
+                SaveUserData(ud);
+                
+                return ud;
+            }
+
+            MemoryStream ms = new MemoryStream();
+            BinaryFormatter bf = new BinaryFormatter();
+            byte[] bytes = File.ReadAllBytes(USERDATA_PATH);
+            ms.Write(bytes, 0, bytes.Length);
+            ms.Seek(0, SeekOrigin.Begin);
+            UserData data = (UserData)bf.Deserialize(ms);
+
+            return data;
+        }
+
+        public static bool UserDataExists()
+        {
+            return File.Exists(USERDATA_PATH);
+        }
+
+        public static void ResetProgress()
+        {
+            if (UserDataExists())
+            {
+                File.Delete(USERDATA_PATH);
+            }
+
+            if (SaveFileExists())
+            {
+                File.Delete(SAVEFILE_PATH);
+            }
         }
 
 

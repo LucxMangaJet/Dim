@@ -21,5 +21,15 @@ namespace Dim
 
     }
 
+    /////////////////////////////////////////////////
+    /// Class that gets serialized to store User Data.
+    /////////////////////////////////////////////////
+    [System.Serializable]
+    public class UserData
+    {
+        public bool CompletedGame;
+        public int LevelsUnlocked;
+    }
+
 
 }
