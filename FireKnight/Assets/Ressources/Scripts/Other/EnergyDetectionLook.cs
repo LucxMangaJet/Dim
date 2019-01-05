@@ -22,22 +22,27 @@ namespace Dim
         [SerializeField] Material lightcone;
         [SerializeField] Material graycone;
 
-        Vector3 LaserTurretPosiitonOffset;
+        Transform LaserTurretPosiiton;
 
         void Start()
         {
+
             isVisible = true;
 
-            LaserTurretPosiitonOffset = new Vector3(0,0.015f,0.0061f);
-
             laserTurret = GetComponent<LaserTurret>();
+
+            LaserTurretPosiiton = transform;
+            while (LaserTurretPosiiton.name != "Tip")
+            {
+                LaserTurretPosiiton = LaserTurretPosiiton.GetChild(0);
+            }
 
             //light = LightSetup();
             LightbulbObject = new GameObject();
 
             LightbulbObject.transform.parent = transform;
 
-            LightbulbObject.transform.localPosition = LaserTurretPosiitonOffset;
+            LightbulbObject.transform.position = LaserTurretPosiiton.position;
             LightbulbObject.transform.localRotation = Quaternion.identity;
             LightbulbObject.transform.localScale = Vector3.one;
             ps = ParticleSystemSetup();
@@ -46,7 +51,7 @@ namespace Dim
             
             grayscaleObject.transform.parent = transform;
 
-            grayscaleObject.transform.localPosition = LaserTurretPosiitonOffset;
+            grayscaleObject.transform.position = LaserTurretPosiiton.position;
             grayscaleObject.transform.localRotation = Quaternion.identity;
             grayscaleObject.transform.localScale = Vector3.one;
 
