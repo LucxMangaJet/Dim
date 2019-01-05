@@ -8,6 +8,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System;
 using System.Reflection;
+using UnityEngine.SceneManagement;
 
 namespace Dim
 {
@@ -160,6 +161,23 @@ namespace Dim
             }
         }
 
+        public static void LoadSceneAndSaveProgress(int buildIndex)
+        {
+            Debug.Log("Loading Scene " + GetSceneNameFromBuildIndex(buildIndex) + ".");
+
+        }
+
+
+        public static string GetSceneNameFromBuildIndex(int buildIndex)
+        {
+           
+            string path = SceneUtility.GetScenePathByBuildIndex(buildIndex);
+            int slash = path.LastIndexOf('/');
+            string name = path.Substring(slash + 1);
+            int dot = name.LastIndexOf('.');
+            return name.Substring(0, dot);
+           
+        }
 
         public static Vector3 RoundVector3(Vector3 v)
         {
