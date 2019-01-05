@@ -19,6 +19,9 @@ namespace Dim.Player
         [Header("Default Settings")]
         [SerializeField] float transitionSpeed;
         [SerializeField] float rotationSpeed;
+        [SerializeField] float snapToDistance = 1f;
+        [SerializeField] float snaptransitionSpeed = 0.4f;
+        [SerializeField] float lockOnDistance = 0.1f;
         //[SerializeField] PostProcessingProfile postProcessing;
 
 
@@ -35,6 +38,7 @@ namespace Dim.Player
         private Transform player;
         private Camera cam;
 
+        private bool isSnapped;
 
         //CutScenes
         Coroutine cutSceneCoroutine;
@@ -59,7 +63,7 @@ namespace Dim.Player
                 switch (state)
                 {
                     case CamState.PlayerFollow:
-                        targetPos = player.position + dispFromPlayer;
+                        targetPos = player.position + dispFromPlayer;                    
                         break;
 
                     case CamState.PorterPipe:
@@ -67,7 +71,8 @@ namespace Dim.Player
                         break;
                 }
 
-                MoveTowardsTarget();
+                    MoveTowardsTarget();
+
             }
             else
             {
@@ -85,12 +90,39 @@ namespace Dim.Player
 
         }
 
-        private void MoveTowardsTarget()
+        private void UnSnap()
         {
-            transform.position = Vector3.Lerp(transform.position, targetPos, transitionSpeed);
-            transform.eulerAngles = Dim.GlobalMethods.LerpAngle(transform.eulerAngles, targetRot, rotationSpeed);
+            
+            isSnapped = false;
         }
 
+        private void MoveTowardsTarget()
+        {
+            if (isSnapped)
+            {
+                transform.position = targetPos;
+            }
+            else
+            {
+                float dist = Vector3.Distance(transform.position, targetPos);
+
+                if(dist< lockOnDistance)
+                {
+                    isSnapped = true;
+                }
+
+                if (dist < snapToDistance)
+                {
+                    transform.position = Vector3.Lerp(transform.position, targetPos, snaptransitionSpeed);
+                }
+                else
+                {
+                    transform.position = Vector3.Lerp(transform.position, targetPos, transitionSpeed);
+                }
+            }
+            
+            transform.eulerAngles = Dim.GlobalMethods.LerpAngle(transform.eulerAngles, targetRot, rotationSpeed);
+        }
 
         private Vector3 GetCamPos(Vector3 pPos, float zDist, bool zFreeze)
         {
@@ -110,6 +142,7 @@ namespace Dim.Player
             state = CamState.Static;
             targetPos = pos;
             targetRot = rot;
+            UnSnap();
 
         }
 
@@ -118,6 +151,7 @@ namespace Dim.Player
             state = CamState.PlayerFollow;
             targetRot = rot;
             dispFromPlayer = displacement;
+            UnSnap();
 
         }
 
@@ -127,11 +161,13 @@ namespace Dim.Player
             zFreeze = freezeZ;
             targetRot = rot;
             camDistZ = zDist;
+            UnSnap();
         }
 
         public void SetToCutScene(CutSceneTransition[] c)
         {
             cutSceneCoroutine = StartCoroutine(PlayCutScene(c));
+            UnSnap();
         }
 
         
