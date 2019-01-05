@@ -2356,6 +2356,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce7d77c7fdc2c45828625f13762297b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Active: 0
 --- !u!114 &114151791496176776
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2441,6 +2442,7 @@ MonoBehaviour:
   DrainPreparationTimeInSec: 2
   DrainDurationInSec: 2
   AbsorptionArea: {fileID: 1723306138807374}
+  DrainFlow: {fileID: 0}
   HearingCoolDown: 1
   SoundInterestLength: 5
   MovementCap: 2
@@ -2448,6 +2450,8 @@ MonoBehaviour:
   Base: {fileID: 0}
   IdleToWalkBackTime: 2
   RechargeMinTime: 2
+  walkSound: {fileID: 8300000, guid: 6ea4cb95902258445a55abec3751cd78, type: 3}
+  succSound: {fileID: 8300000, guid: 993594257200f804fae6d005ac0bca82, type: 3}
   rb: {fileID: 0}
 --- !u!114 &114956040909942240
 MonoBehaviour:
