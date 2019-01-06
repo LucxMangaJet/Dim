@@ -24,9 +24,10 @@ namespace Dim.Interaction
         public event System.Action<bool> OnIsActiveChange;
 
 
-        private void Start()
+         public override void Awake()
         {
             audioSource = GetComponent<AudioSource>();
+            base.Awake();
         }
 
         public override void OnEnergyChange(byte newEnergy)
@@ -157,6 +158,11 @@ namespace Dim.Interaction
                 "Moves to still do: " + operationsQueue.Count,
                 "Player in Waiting Range: " + PlayerIsInRange()
             };
+        }
+
+        private void OnDestroy()
+        {
+            StopAllCoroutines();
         }
     }
 }
