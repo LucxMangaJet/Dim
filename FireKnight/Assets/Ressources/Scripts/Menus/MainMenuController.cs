@@ -20,19 +20,17 @@ namespace Dim.Menu
         [SerializeField] GameObject levelDisplayObject, levelSelectionObject , continueObject;
         //relsolutions
         [SerializeField] Dropdown resDropdown;
+        [SerializeField] GameObject mainDoorAnimationObj;
+
         Resolution[] resolutions;
 
         string[] levelScenesNames;
         UserData userData;
+        bool preparingNewGame = false;
 
         void Start()
         {
-            //CheckIfInRightMenu
             userData = GlobalMethods.LoadUserDataFromFile();
-            if (userData.CompletedGame)
-            {
-                GlobalMethods.LoadSceneFromName("ENdindMEnu");
-            }
 
             //resDropdown
             resolutions = Screen.resolutions;
@@ -53,10 +51,7 @@ namespace Dim.Menu
             resDropdown.RefreshShownValue();
 
             //continue
-            if (!GlobalMethods.SaveFileExists())
-            {
-                continueObject.SetActive(false);
-            }
+            CheckIfShouldDisplayContinue();
 
 
 
@@ -66,6 +61,13 @@ namespace Dim.Menu
 
         }
 
+        private void CheckIfShouldDisplayContinue()
+        {
+            if (!GlobalMethods.SaveFileExists())
+            {
+                continueObject.SetActive(false);
+            }
+        }
 
 
         //changing Menus
@@ -77,6 +79,7 @@ namespace Dim.Menu
         public void ReturnToMainMenu()
         {
             GameState.SetState(GameState.State.MainMenu);
+            CheckIfShouldDisplayContinue();
         }
 
         public void EnterLevelSelection()
@@ -124,6 +127,23 @@ namespace Dim.Menu
         public void Continue()
         {
             GlobalMethods.LoadFromSaveFile();
+        }
+
+        public void NewGame()
+        {
+            if (!preparingNewGame)
+            {
+                preparingNewGame = true;
+                mainDoorAnimationObj.GetComponent<Animator>().Play("MainDoor");
+                mainDoorAnimationObj.GetComponent<AudioSource>().Play();
+                Invoke("LoadIntro", 16);
+            }
+        }
+
+        private void LoadIntro()
+        {
+            GlobalMethods.ResetProgress();
+            GlobalMethods.LoadSceneAndSaveProgress(2);
         }
 
 

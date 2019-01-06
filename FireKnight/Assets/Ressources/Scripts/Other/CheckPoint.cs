@@ -29,6 +29,7 @@ namespace Dim {
                 if (LevelHandler.GetCurrentCheckPointIndex() < checkPointIndex)
                 {
                     LevelHandler.SetCurrentCheckPointIndex(checkPointIndex);
+                    GlobalMethods.SaveToSaveFile();
                 }
             }
     }

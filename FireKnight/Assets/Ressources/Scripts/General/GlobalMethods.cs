@@ -109,7 +109,6 @@ namespace Dim
         public static void SaveUserData(UserData ud)
         {
 
-
             BinaryFormatter bf = new BinaryFormatter();
             MemoryStream ms = new MemoryStream();
             bf.Serialize(ms, ud);
@@ -159,6 +158,8 @@ namespace Dim
             {
                 File.Delete(SAVEFILE_PATH);
             }
+
+            Debug.Log("User Data resetted.");
         }
 
         public static void LoadSceneAndSaveProgress(int buildIndex)
