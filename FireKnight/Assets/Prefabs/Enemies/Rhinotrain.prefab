@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 114517584076282214}
   - component: {fileID: 114909042544547658}
   m_Layer: 0
-  m_Name: RhinoTrain
+  m_Name: Rhinotrain
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
