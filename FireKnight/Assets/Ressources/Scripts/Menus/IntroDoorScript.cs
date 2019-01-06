@@ -19,6 +19,12 @@ namespace Dim.Interaction
             if (Storage != null)
             {
                 Storage.OnEnergyChange += OnEnergyChange;
+                animator = GetComponent<Animator>();
+                audioSource = GetComponent<AudioSource>();
+                Particlestop = GameObject.FindGameObjectWithTag("DoorParticle").GetComponent<ParticleSystem>();
+
+                animator.enabled = false;
+
             }
             else
             {
@@ -26,15 +32,6 @@ namespace Dim.Interaction
             }
         }
 
-        public void Start()
-        {
-            animator = GetComponent<Animator>();
-            audioSource = GetComponent<AudioSource>();
-            Particlestop = GameObject.FindGameObjectWithTag("DoorParticle").GetComponent<ParticleSystem>();
-
-            animator.enabled = false;
-
-        }
 
         void OnEnergyChange(byte newEnergy)
         {
