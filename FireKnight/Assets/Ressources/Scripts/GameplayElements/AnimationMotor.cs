@@ -12,7 +12,10 @@ namespace Dim.Interaction
     public class AnimationMotor : InteractionBase
     {
 
-        [SerializeField] byte activationMinEnergy;
+        [SerializeField] byte activationEnergy;
+        [SerializeField] bool exactEnergy;
+        [SerializeField] bool setTrigger;
+        [SerializeField] string triggerName;
 
         Animator animator;
         bool active;
@@ -25,19 +28,42 @@ namespace Dim.Interaction
 
         public override void OnEnergyChange(byte newEnergy)
         {
-            if(newEnergy>= activationMinEnergy)
+            bool query = newEnergy >= activationEnergy;
+            if (exactEnergy)
+            {
+                query = newEnergy == activationEnergy;
+            }
+
+            if(query)
             {
                 if (!active)
                 {
                     active = true;
-                    animator.enabled = true;
+                    if (setTrigger)
+                    {
+                        animator.SetTrigger(triggerName);
+                    }
+                    else
+                    {
+                        animator.enabled = true;
+                    }
+
+
                 }
             }
             else
             {
                 if (active)
                 {
-                    animator.enabled = false;
+                    if (setTrigger)
+                    {
+                       //do nothing
+                    }
+                    else
+                    {
+                        animator.enabled = false;
+                    }
+
                     active = false;
                 }
             }
