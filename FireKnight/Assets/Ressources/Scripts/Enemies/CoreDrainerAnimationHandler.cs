@@ -22,13 +22,8 @@ namespace Dim.Enemies
         {
             animator = GetComponentInChildren<Animator>();
             pgC = GetComponent<CoreDrainerController>();
-            pgC.OnDestroyed += CatchDestroyed;
         }
 
-        private void CatchDestroyed()
-        {
-            Debug.Log("Would Play CoreDrainer Destruction animation if it had one.");
-        }
 
         private void GetFSM(CoreDrainerStateMachine fSM)
         {

@@ -10,6 +10,8 @@ namespace Dim
     /////////////////////////////////////////////////
     public class VisualDestructionHandler : MonoBehaviour
     {
+        private const float RANDOMFORCE_MAX = 1;
+
         public static Vector3 extraForce;
         public static float extraForceTimeStamp;
         public static GameObject extraForceTarget;
@@ -29,9 +31,19 @@ namespace Dim
 
             foreach (var rb in g.GetComponentsInChildren<Rigidbody>())
             {
-                rb.velocity = velocity;
+                rb.velocity = velocity + GetRandomForce();
             }
 
         }
+
+        private Vector3 GetRandomForce()
+        {
+            float x = (Random.value - 0.5f) * 2 * RANDOMFORCE_MAX;
+            float y = (Random.value - 0.5f) * 2 * RANDOMFORCE_MAX;
+            float z = (Random.value - 0.5f) * 2 * RANDOMFORCE_MAX;
+            return new Vector3(x,y,z);
+        }
     }
+
+    
 }

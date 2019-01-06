@@ -1034,6 +1034,7 @@ GameObject:
   - component: {fileID: 95917954321794860}
   - component: {fileID: 114178159350086516}
   - component: {fileID: 114627168350548082}
+  - component: {fileID: 114915356271204514}
   m_Layer: 0
   m_Name: Core_Drainer
   m_TagString: Untagged
@@ -2065,7 +2066,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1883753307548488}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: -16.06, y: 1.344, z: 6.41}
+  m_LocalPosition: {x: -2.38, y: 1.61, z: -0.21756363}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4739644246402402}
@@ -2453,6 +2454,20 @@ MonoBehaviour:
   walkSound: {fileID: 8300000, guid: 6ea4cb95902258445a55abec3751cd78, type: 3}
   succSound: {fileID: 8300000, guid: 993594257200f804fae6d005ac0bca82, type: 3}
   rb: {fileID: 0}
+--- !u!114 &114915356271204514
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1883753307548488}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b86f34289e6f2ef47a79955c3c570b98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyedObject: {fileID: 1316150719763258, guid: eeb861d667e128240b3f90a3b24ca161,
+    type: 2}
+  scaleMultiplication: 1
 --- !u!114 &114956040909942240
 MonoBehaviour:
   m_ObjectHideFlags: 1

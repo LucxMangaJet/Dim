@@ -116,9 +116,15 @@ namespace Dim.Enemies
             Destroy(AbsorptionArea);
             SoundMechanicHandler.RemoveListener(transform);
             EnergyHandler.RemoveEnergyObject(this);
-
+            Destroy(transform.GetComponentInChildren<SkinnedMeshRenderer>());
+            GetComponent<VisualDestructionHandler>().Destroy(rb.velocity);
+            Invoke("Eliminate", 2);
         }
 
+        private void Eliminate()
+        {
+            Destroy(this);
+        }
 
         public void CheckIfInterestRanOutOnSound()
         {
