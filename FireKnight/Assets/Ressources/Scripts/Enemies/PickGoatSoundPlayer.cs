@@ -33,7 +33,6 @@ namespace Dim.Enemies
                 timeStamp = Time.time;
                 // SoundMechanicHandler.PlaySound(transform, transform.position, Loudness, Range, false);
                 source.Play();
-                Debug.Log(other.name);
             }
         }
 

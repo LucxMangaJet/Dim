@@ -72,6 +72,7 @@ namespace Dim.Enemies
             rb.isKinematic = true;
             Destroy(GetComponent<Collider>());
             Destroy(headDamageCollider);
+            Destroy(transform.GetComponentInChildren<SkinnedMeshRenderer>());
             audioSource.clip = deathSound;
             audioSource.Play();
             EnergyHandler.RemoveEnergyObject(this);
@@ -79,6 +80,9 @@ namespace Dim.Enemies
             EnergyArea ha;
             ha = EnergyHandler.CreateEnergyArea(transform.position);
             ha.AddEnergy(false);
+
+            VisualDestructionHandler destructionHandler = GetComponent<VisualDestructionHandler>();
+            destructionHandler.Destroy(rb.velocity);
 
         }
 

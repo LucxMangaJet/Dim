@@ -757,9 +757,9 @@ GameObject:
   - component: {fileID: 114162331250202286}
   - component: {fileID: 81529858937046026}
   - component: {fileID: 114452855085275850}
+  - component: {fileID: 114144130957630238}
   - component: {fileID: 114399586405646904}
   - component: {fileID: 82659549120627022}
-  - component: {fileID: 114144130957630238}
   - component: {fileID: 82791137315152112}
   m_Layer: 0
   m_Name: Prefab_Maincharacter_TEMP
@@ -2800,8 +2800,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1402019548828144}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: -20, y: 9, z: 0}
+  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -14.89, y: 3, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4058933531437630}
@@ -3915,8 +3915,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b86f34289e6f2ef47a79955c3c570b98, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DestroyedPlayer: {fileID: 1490462754017586, guid: 23c71f0077fac2b479ab062853a174aa,
+  destroyedObject: {fileID: 1490462754017586, guid: 23c71f0077fac2b479ab062853a174aa,
     type: 2}
+  scaleMultiplication: 3
 --- !u!114 &114452855085275850
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -3933,6 +3934,7 @@ MonoBehaviour:
   behavioursToKeepActive:
   - {fileID: 81529858937046026}
   - {fileID: 82659549120627022}
+  - {fileID: 82791137315152112}
 --- !u!114 &114473801372894926
 MonoBehaviour:
   m_ObjectHideFlags: 1

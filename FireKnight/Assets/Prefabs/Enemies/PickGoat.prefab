@@ -465,6 +465,7 @@ GameObject:
   - component: {fileID: 82767541411455230}
   - component: {fileID: 114589955543164914}
   - component: {fileID: 135161604178902468}
+  - component: {fileID: 114485600553131440}
   m_Layer: 0
   m_Name: PickGoat
   m_TagString: Untagged
@@ -1224,7 +1225,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1422172186111056}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -1.7, y: 1.01, z: 0}
+  m_LocalPosition: {x: 0.05, y: 1.41, z: 0}
   m_LocalScale: {x: 12.270982, y: 12.270982, z: 12.270982}
   m_Children:
   - {fileID: 4400597461501564}
@@ -3010,6 +3011,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   displacement: {x: 0, y: 0, z: 0}
+--- !u!114 &114485600553131440
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1422172186111056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b86f34289e6f2ef47a79955c3c570b98, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  destroyedObject: {fileID: 1647162668565516, guid: 901630cffe1ff6e429cca3084a07854b,
+    type: 2}
+  scaleMultiplication: 1
 --- !u!114 &114488002001523880
 MonoBehaviour:
   m_ObjectHideFlags: 1
