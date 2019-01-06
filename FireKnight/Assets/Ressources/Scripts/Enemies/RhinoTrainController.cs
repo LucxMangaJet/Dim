@@ -7,7 +7,7 @@ namespace Dim.Enemies {
     /////////////////////////////////////////////////
     /// Responsible for the Behavior of a RhinoTrain.
     /////////////////////////////////////////////////
-    public class RhinoTrainController : MonoBehaviour , Visualize.IExtraVisualization{
+    public class RhinoTrainController : MonoBehaviour, Visualize.IExtraVisualization {
 
         public Interaction.RhinoTrainBase rhinoTrainBase;
 
@@ -17,17 +17,21 @@ namespace Dim.Enemies {
 
         [HideInInspector] public Rigidbody rb;
         private RhinoTrainStateMachine sM;
-        private float timestamp= -10;
+        private float timestamp = -10;
         bool isDestroyed = false;
-        [HideInInspector] public bool MoveDirectionIsRight; 
+        [HideInInspector] public bool MoveDirectionIsRight;
         [HideInInspector] public GroundChecker groundChecker;
         Animator animator;
+        AudioSource source;
+        [SerializeField] AudioClip chargeStartClip, walkBackStartClip;
 
         private void Start()
         {
             transform.position = rhinoTrainBase.transform.position;
             rb = GetComponent<Rigidbody>();
             animator = GetComponent<Animator>();
+            source = GetComponent<AudioSource>();
+
             groundChecker = GetComponentInChildren<GroundChecker>();
             sM = new RhinoTrainStateMachine(this);
             rhinoTrainBase.OnSoundHeard += CatchActivation;
@@ -67,6 +71,18 @@ namespace Dim.Enemies {
         public void SetAnimatorWalkBack(bool active)
         {
             animator.SetBool("isWalkingBack", active);
+        }
+
+        public void PlayChargeSound()
+        {
+            source.clip = chargeStartClip;
+            source.Play();
+        }
+
+        public void PlayWalkBackSound()
+        {
+            source.clip = walkBackStartClip;
+            source.Play();
         }
 
         void Update()

@@ -26,9 +26,10 @@ namespace Dim {
         {
             if (other.tag == "Player")
             {
-                if (LevelHandler.GetCurrentCheckPointIndex() < checkPointIndex)
+                if (LevelHandler.GetCurrentCheckPointIndex() <= checkPointIndex)
                 {
                     LevelHandler.SetCurrentCheckPointIndex(checkPointIndex);
+                    GlobalMethods.SaveToSaveFile();
                 }
             }
     }

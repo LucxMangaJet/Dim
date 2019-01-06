@@ -94,10 +94,10 @@ namespace Dim.Player
                 UnityEngine.Debug.Log("Player Died, Respawning soon");
                 audioSource.clip = deathClip;
                 audioSource.Play();
-                PlayerDestructionHandler destructionHandler = GetComponent<PlayerDestructionHandler>();
+                VisualDestructionHandler destructionHandler = GetComponent<VisualDestructionHandler>();
                 if (destructionHandler != null)
                 {
-                    destructionHandler.DestroyPlayer(rb.velocity);
+                    destructionHandler.Destroy(rb.velocity);
                 }
                 GetComponent<PlayerDeactivationHandler>().Dectivate();
                 EnergyHandler.RemoveEnergyObject(this);

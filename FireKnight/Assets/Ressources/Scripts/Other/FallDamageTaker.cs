@@ -24,8 +24,9 @@ namespace Dim {
             {
                 if(tag == "Player")
                 {
-                    Player.PlayerDestructionHandler.extraForceTimeStamp = Time.time;
-                    Player.PlayerDestructionHandler.extraForce = -collision.relativeVelocity;
+                    VisualDestructionHandler.extraForceTimeStamp = Time.time;
+                    VisualDestructionHandler.extraForce = -collision.relativeVelocity;
+                    VisualDestructionHandler.extraForceTarget = gameObject;
                 }
 
                 GetComponent<IGameObjectDamageTaker>().TakeDamage();

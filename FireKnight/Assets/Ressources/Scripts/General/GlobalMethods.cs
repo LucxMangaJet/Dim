@@ -8,6 +8,7 @@ using System.Runtime.Serialization;
 using System.Text;
 using System;
 using System.Reflection;
+using UnityEngine.SceneManagement;
 
 namespace Dim
 {
@@ -17,6 +18,7 @@ namespace Dim
     public static class GlobalMethods 
     {
         public static string SAVEFILE_PATH = Application.persistentDataPath + "/SaveFile";
+        public static string USERDATA_PATH = Application.persistentDataPath + "/UserData";
 
         public static void QuitGame()
         {
@@ -103,6 +105,87 @@ namespace Dim
             return File.Exists(SAVEFILE_PATH);
         }
 
+
+        public static void SaveUserData(UserData ud)
+        {
+
+            BinaryFormatter bf = new BinaryFormatter();
+            MemoryStream ms = new MemoryStream();
+            bf.Serialize(ms, ud);
+            byte[] bytz = ms.ToArray();
+            FileStream file = File.Create(USERDATA_PATH);
+            file.Write(bytz, 0, bytz.Length);
+            file.Close();
+            Debug.Log("User Data saved successfully.");
+        }
+
+        public static UserData LoadUserDataFromFile()
+        {
+            if (!UserDataExists())
+            {
+                Debug.LogError("UserData not found, creating Blank.");
+                UserData ud = new UserData();
+                ud.CompletedGame = false;
+                ud.LevelsUnlocked = 2;
+                SaveUserData(ud);
+                
+                return ud;
+            }
+
+            MemoryStream ms = new MemoryStream();
+            BinaryFormatter bf = new BinaryFormatter();
+            byte[] bytes = File.ReadAllBytes(USERDATA_PATH);
+            ms.Write(bytes, 0, bytes.Length);
+            ms.Seek(0, SeekOrigin.Begin);
+            UserData data = (UserData)bf.Deserialize(ms);
+
+            return data;
+        }
+
+        public static bool UserDataExists()
+        {
+            return File.Exists(USERDATA_PATH);
+        }
+
+        public static void ResetProgress()
+        {
+            if (UserDataExists())
+            {
+                File.Delete(USERDATA_PATH);
+            }
+
+            if (SaveFileExists())
+            {
+                File.Delete(SAVEFILE_PATH);
+            }
+
+            Debug.Log("User Data resetted.");
+        }
+
+        public static void LoadSceneAndSaveProgress(int buildIndex)
+        {
+            Debug.Log("Loading Scene " + GetSceneNameFromBuildIndex(buildIndex) + ".");
+            UserData ud = LoadUserDataFromFile();
+            if (buildIndex > ud.LevelsUnlocked)
+            {
+                ud.LevelsUnlocked = buildIndex;
+                SaveUserData(ud);
+            }
+
+            SceneManager.LoadScene(buildIndex);
+        }
+
+
+        public static string GetSceneNameFromBuildIndex(int buildIndex)
+        {
+           
+            string path = SceneUtility.GetScenePathByBuildIndex(buildIndex);
+            int slash = path.LastIndexOf('/');
+            string name = path.Substring(slash + 1);
+            int dot = name.LastIndexOf('.');
+            return name.Substring(0, dot);
+           
+        }
 
         public static Vector3 RoundVector3(Vector3 v)
         {

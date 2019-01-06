@@ -176,7 +176,7 @@ namespace Dim.Player
 
         private bool IdleToEmission()
         {
-            if (InputController.GetReleaseEnergy(InputStateType.PRESSED) && pc.EnergyAmount > 0 )
+            if (InputController.GetReleaseEnergy(InputStateType.PRESSED) && pc.EnergyAmount > 0 && pc.currentStorage != null ) //last case is Temporary, Bait mechanic has beed removed until implemented
             {
                 return true;
             }
@@ -251,7 +251,9 @@ namespace Dim.Player
 
                 if (pc.currentStorage == null)
                 {
-                    CreateEnergy();
+                    //CreateEnergy(); temporarelly disabled
+                    used = true;
+                    return;
                 }
                 else
                 {

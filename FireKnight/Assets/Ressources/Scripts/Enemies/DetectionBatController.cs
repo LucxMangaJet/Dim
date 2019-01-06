@@ -12,7 +12,7 @@ namespace Dim.Enemies
     /////////////////////////////////////////////////
     public class DetectionBatController : Interaction.InteractionBase, ISoundMechanicTaker
     {
-        float repetitionMinimum = 5;
+        float repetitionMinimum = 6;
         float repetitionLoudness = 10;
         [SerializeField] float repetitionRange;
         [SerializeField] float cooldownTime;

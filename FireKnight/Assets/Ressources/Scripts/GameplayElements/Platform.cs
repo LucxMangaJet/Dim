@@ -19,8 +19,15 @@ namespace Dim.Interaction
 
         bool inOperation = false;
         bool isActive = false;
+        AudioSource audioSource;
 
         public event System.Action<bool> OnIsActiveChange;
+
+
+        private void Start()
+        {
+            audioSource = GetComponent<AudioSource>();
+        }
 
         public override void OnEnergyChange(byte newEnergy)
         {
@@ -105,6 +112,7 @@ namespace Dim.Interaction
 
             Vector3 target = platformEnergyPositions[level];
             Vector3 dir = (target- transform.position).normalized;
+            audioSource.Play();
 
             while(Vector3.Distance(transform.position, target) > 0.3)
             {
@@ -118,6 +126,7 @@ namespace Dim.Interaction
             b1.SetActive(false);
             b2.SetActive(false);
             IsActive = false;
+            
 
             LevelHandler.GetPlayer().parent = null;
 
@@ -125,6 +134,8 @@ namespace Dim.Interaction
             {
                 operationsQueue.Dequeue().Invoke();
             }
+
+            audioSource.Stop();
         }
 
         private void OnCollisionEnter(Collision collision)

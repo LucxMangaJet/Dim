@@ -20,17 +20,24 @@ namespace Dim.Menu
         [SerializeField] GameObject levelDisplayObject, levelSelectionObject , continueObject;
         //relsolutions
         [SerializeField] Dropdown resDropdown;
+        [SerializeField] GameObject mainDoorAnimationObj;
+
         Resolution[] resolutions;
 
         string[] levelScenesNames;
+        UserData userData;
+        bool preparingNewGame = false;
 
         void Start()
         {
+            userData = GlobalMethods.LoadUserDataFromFile();
+
             //resDropdown
             resolutions = Screen.resolutions;
             resDropdown.ClearOptions();
             List<string> options = new List<string>();
             int myResIndx = 0;
+
             foreach (Resolution r in resolutions)
             {
                 if (r.width == Screen.currentResolution.width && r.height == Screen.currentResolution.height)
@@ -44,10 +51,7 @@ namespace Dim.Menu
             resDropdown.RefreshShownValue();
 
             //continue
-            if (!GlobalMethods.SaveFileExists())
-            {
-                continueObject.SetActive(false);
-            }
+            CheckIfShouldDisplayContinue();
 
 
 
@@ -57,6 +61,13 @@ namespace Dim.Menu
 
         }
 
+        private void CheckIfShouldDisplayContinue()
+        {
+            if (!GlobalMethods.SaveFileExists())
+            {
+                continueObject.SetActive(false);
+            }
+        }
 
 
         //changing Menus
@@ -68,6 +79,7 @@ namespace Dim.Menu
         public void ReturnToMainMenu()
         {
             GameState.SetState(GameState.State.MainMenu);
+            CheckIfShouldDisplayContinue();
         }
 
         public void EnterLevelSelection()
@@ -117,12 +129,29 @@ namespace Dim.Menu
             GlobalMethods.LoadFromSaveFile();
         }
 
+        public void NewGame()
+        {
+            if (!preparingNewGame)
+            {
+                preparingNewGame = true;
+                mainDoorAnimationObj.GetComponent<Animator>().Play("MainDoor");
+                mainDoorAnimationObj.GetComponent<AudioSource>().Play();
+                Invoke("LoadIntro", 16);
+            }
+        }
+
+        private void LoadIntro()
+        {
+            GlobalMethods.ResetProgress();
+            GlobalMethods.LoadSceneAndSaveProgress(2);
+        }
+
 
         private void FindAviableLevels()
         {
             List<string> scenes = new List<string>();
 
-            for (int i = 0; i < SceneManager.sceneCountInBuildSettings; i++)
+            for (int i = 0; i <= userData.LevelsUnlocked; i++)
             {
                 string s = System.IO.Path.GetFileNameWithoutExtension(SceneUtility.GetScenePathByBuildIndex(i));
                     
