@@ -170,7 +170,8 @@ namespace Dim
                 ud.LevelsUnlocked = buildIndex;
                 SaveUserData(ud);
             }
-           
+
+            SceneManager.LoadScene(buildIndex);
         }
 
 
