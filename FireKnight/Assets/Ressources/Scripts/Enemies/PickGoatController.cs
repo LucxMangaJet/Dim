@@ -55,7 +55,7 @@ namespace Dim.Enemies
 
                 if (Mathf.Abs(rb.velocity.x)>0.1)
                 {
-                    transform.forward = new Vector3(rb.velocity.x, 0, 0);
+                    transform.forward = new Vector3(-rb.velocity.x, 0, 0);
                 }
                 
             }
@@ -63,10 +63,14 @@ namespace Dim.Enemies
 
         public void Destroy()
         {
+            if (isDestroyed)
+            {
+                return;
+            }
             isDestroyed = true;
             OnDestroyed?.Invoke();
             rb.isKinematic = true;
-            Destroy(GetComponent<BoxCollider>());
+            Destroy(GetComponent<Collider>());
             Destroy(headDamageCollider);
             audioSource.clip = deathSound;
             audioSource.Play();

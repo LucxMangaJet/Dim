@@ -7,7 +7,7 @@ namespace Dim.Enemies {
     /////////////////////////////////////////////////
     /// Responsible for the Behavior of a RhinoTrain.
     /////////////////////////////////////////////////
-    public class RhinoTrainController : MonoBehaviour {
+    public class RhinoTrainController : MonoBehaviour , Visualize.IExtraVisualization{
 
         public Interaction.RhinoTrainBase rhinoTrainBase;
 
@@ -21,11 +21,13 @@ namespace Dim.Enemies {
         bool isDestroyed = false;
         [HideInInspector] public bool MoveDirectionIsRight; 
         [HideInInspector] public GroundChecker groundChecker;
+        Animator animator;
 
         private void Start()
         {
             transform.position = rhinoTrainBase.transform.position;
             rb = GetComponent<Rigidbody>();
+            animator = GetComponent<Animator>();
             groundChecker = GetComponentInChildren<GroundChecker>();
             sM = new RhinoTrainStateMachine(this);
             rhinoTrainBase.OnSoundHeard += CatchActivation;
@@ -57,6 +59,15 @@ namespace Dim.Enemies {
             return false;
         }
 
+        public void SetAnimatorWalk(bool active)
+        {
+            animator.SetBool("isWalking", active);
+        }
+
+        public void SetAnimatorWalkBack(bool active)
+        {
+            animator.SetBool("isWalkingBack", active);
+        }
 
         void Update()
         {
@@ -66,8 +77,11 @@ namespace Dim.Enemies {
             }
         }
 
-
-
-
+        public string[] GetExtraVisualizationElements()
+        {
+            return new string[] {
+                    sM.CurrentState.ToString()
+            };
+        }
     }
 }
