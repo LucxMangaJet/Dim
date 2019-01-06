@@ -42,13 +42,13 @@ ModelImporter:
     13700000: WholeObject_low
   externalObjects: {}
   materials:
-    importMaterials: 1
+    importMaterials: 0
     materialName: 0
     materialSearch: 1
     materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
-    bakeSimulation: 0
+    bakeSimulation: 1
     resampleCurves: 1
     optimizeGameObjects: 0
     motionNodeName: 
@@ -59,7 +59,7 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     importAnimatedCustomProperties: 0
-    importConstraints: 0
+    importConstraints: 1
     animationCompression: 1
     animationRotationError: 0.5
     animationPositionError: 0.5
