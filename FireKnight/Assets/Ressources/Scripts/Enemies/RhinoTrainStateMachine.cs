@@ -92,7 +92,7 @@ namespace Dim.Enemies
             if (firstFrameOfStateChange)
             {
                 c.SetAnimatorWalk(true);
-                c.source.Play();
+                c.PlayChargeSound();
             }
             MoveSideWaysInDirection(c.rhinoTrainBase.target.x > c.transform.position.x);
         }
@@ -137,6 +137,7 @@ namespace Dim.Enemies
             if (firstFrameOfStateChange)
             {
                 c.SetAnimatorWalkBack(true);
+                c.PlayWalkBackSound();
             }
             MoveSideWaysInDirection(c.transform.position.x < c.rhinoTrainBase.transform.position.x);
         }
