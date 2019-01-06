@@ -73,6 +73,12 @@ namespace Dim.Enemies
             Destroy(GetComponent<Collider>());
             Destroy(headDamageCollider);
             Destroy(transform.GetComponentInChildren<SkinnedMeshRenderer>());
+
+            foreach (var item in transform.GetComponentsInChildren<Light>())
+            {
+                Destroy(item);
+            }
+
             audioSource.clip = deathSound;
             audioSource.Play();
             EnergyHandler.RemoveEnergyObject(this);
@@ -83,7 +89,12 @@ namespace Dim.Enemies
 
             VisualDestructionHandler destructionHandler = GetComponent<VisualDestructionHandler>();
             destructionHandler.Destroy(rb.velocity);
+            Invoke("DestroyWhole", 3);
+        }
 
+        private void DestroyWhole()
+        {
+            Destroy(gameObject);
         }
 
 
