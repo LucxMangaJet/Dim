@@ -3079,7 +3079,7 @@ MonoBehaviour:
   DetectionRadius: 1
   DetectionOrigin1: {fileID: 4545461908835700}
   DetectionOrigin2: {fileID: 4090209000967220}
-  deathSound: {fileID: 8300000, guid: b9097a05369925342b090724a32ff59f, type: 3}
+  deathSound: {fileID: 8300000, guid: 50252eb9f76bce049b0b591ec224cbda, type: 3}
   rb: {fileID: 0}
   groundChecker: {fileID: 0}
 --- !u!114 &114589955543164914
