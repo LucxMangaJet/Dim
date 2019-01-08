@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using Dim.Player;
+using UnityEngine.Audio;
 
 namespace Dim.Interaction
 {
@@ -26,6 +27,7 @@ namespace Dim.Interaction
         [SerializeField] float camDistZ;
         [SerializeField] Vector3 camRotation;
         [SerializeField] bool camFreezeZTo0;
+        [SerializeField] AudioMixer mixer;
        
 
         bool playerInArea;
@@ -93,8 +95,11 @@ namespace Dim.Interaction
             PorterPipeSection currentSection = startingSection;
             PorterPipeSection nextSection;
             player.GetComponent<PlayerDeactivationHandler>().Dectivate();
+            mixer.SetFloat("MasterLowPass", 0);
+            mixer.SetFloat("MasterPitch", 0.5f);
+            mixer.SetFloat("MasterEcho", 0);
 
-            while(ShouldContinue(currentSection, targetName))
+            while (ShouldContinue(currentSection, targetName))
             {
                 
                 nextSection = currentSection.GetNextSection(currentMovingDirectionIsForward);
@@ -119,7 +124,9 @@ namespace Dim.Interaction
 
             player.transform.position = currentSection.GetComponent<PorterPipeEntrance>().arrivingPosition;
             player.GetComponent<PlayerDeactivationHandler>().Activate();
-
+            mixer.ClearFloat("MasterLowPass");
+            mixer.ClearFloat("MasterPitch");
+            mixer.ClearFloat("MasterEcho");
         }
 
         private bool ShouldContinue(PorterPipeSection currentSection, string target)

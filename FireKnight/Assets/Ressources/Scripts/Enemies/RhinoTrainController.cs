@@ -76,13 +76,20 @@ namespace Dim.Enemies {
         public void PlayChargeSound()
         {
             source.clip = chargeStartClip;
+            source.loop = false;
             source.Play();
         }
 
         public void PlayWalkBackSound()
         {
             source.clip = walkBackStartClip;
+            source.loop = true;
             source.Play();
+        }
+
+        public void StopSound()
+        {
+            source.Stop();
         }
 
         void Update()
