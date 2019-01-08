@@ -115,7 +115,6 @@ namespace Dim.Interaction
             if (!audioSource.isPlaying)
             {
                 audioSource.Play();
-                Debug.Log("SOUND PLAY");
             }
 
             Vector3 target = platformEnergyPositions[level];
