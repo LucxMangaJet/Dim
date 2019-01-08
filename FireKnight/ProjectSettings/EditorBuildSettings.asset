@@ -23,7 +23,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/NewLevels/Level4.unity
     guid: a4bebd954ac1aaa43a91f82f35791f76
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/NewLevels/RoofLevel.unity
     guid: 3506f776cda24204e93e8a682f511dbe
+  - enabled: 1
+    path: Assets/Scenes/NewLevels/Level3.unity
+    guid: 019f870d799a5ad42b945fefff1d6c0c
   m_configObjects: {}
