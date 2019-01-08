@@ -79,7 +79,11 @@ namespace Dim.Enemies
         private void InBaseUpdate()
         {
             if (firstFrameOfStateChange)
+            {
                 c.SetAnimatorWalkBack(false);
+                c.StopSound();
+            }
+                
         }
 
         private bool InBaseToCharge()
