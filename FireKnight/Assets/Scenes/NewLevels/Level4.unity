@@ -54850,7 +54850,7 @@ Prefab:
     - target: {fileID: 114270492958404574, guid: 0ca0663a4e48bea409a732c9adebfda5,
         type: 2}
       propertyPath: sceneToLoadIndex
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ca0663a4e48bea409a732c9adebfda5, type: 2}
