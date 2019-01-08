@@ -41,6 +41,7 @@ namespace Dim.Enemies
         [Header("Sound")]
         [SerializeField] AudioClip walkSound;
         [SerializeField] AudioClip succSound;
+        [SerializeField] AudioClip deathSound;
 
         private bool isDestroyed = false;
 
@@ -118,6 +119,9 @@ namespace Dim.Enemies
             EnergyHandler.RemoveEnergyObject(this);
             Destroy(transform.GetComponentInChildren<SkinnedMeshRenderer>());
             GetComponent<VisualDestructionHandler>().Destroy(rb.velocity);
+            audioSource.clip = deathSound;
+            audioSource.loop = false;
+            audioSource.Play();
             Invoke("Eliminate", 2);
         }
 

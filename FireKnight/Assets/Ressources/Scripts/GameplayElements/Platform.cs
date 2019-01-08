@@ -80,6 +80,7 @@ namespace Dim.Interaction
 
         private IEnumerator WaitForPlayer(byte level)
         {
+            audioSource.Stop();
             IsActive = true;
             while (true)
             {
@@ -111,9 +112,14 @@ namespace Dim.Interaction
             b1.SetActive(true);
             b2.SetActive(true);
 
+            if (!audioSource.isPlaying)
+            {
+                audioSource.Play();
+                Debug.Log("SOUND PLAY");
+            }
+
             Vector3 target = platformEnergyPositions[level];
             Vector3 dir = (target- transform.position).normalized;
-            audioSource.Play();
 
             while(Vector3.Distance(transform.position, target) > 0.3)
             {
@@ -128,8 +134,7 @@ namespace Dim.Interaction
             b2.SetActive(false);
             IsActive = false;
             
-
-            LevelHandler.GetPlayer().parent = null;
+            
 
             if (operationsQueue.Count > 0)
             {
