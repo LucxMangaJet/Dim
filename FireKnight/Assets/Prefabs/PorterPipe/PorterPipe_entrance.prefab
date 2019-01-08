@@ -173,6 +173,7 @@ MonoBehaviour:
   camDistZ: 10
   camRotation: {x: 0, y: 0, z: 0}
   camFreezeZTo0: 1
+  mixer: {fileID: 24100000, guid: abcee07bc655fe947943e93575f62660, type: 2}
 --- !u!114 &114790756822845578
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -184,7 +185,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfa28dd7a084ae74a8e2914c6057fb3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  intensityGoal: 0
 --- !u!114 &114931845208731538
 MonoBehaviour:
   m_ObjectHideFlags: 1
