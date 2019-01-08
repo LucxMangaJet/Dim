@@ -280,7 +280,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1554180223021354}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.455, y: 1.4, z: 0}
+  m_LocalPosition: {x: 1.5, y: 1.4, z: 0}
   m_LocalScale: {x: 0.1178, y: 1.9896, z: 1}
   m_Children: []
   m_Father: {fileID: 4663525548880776}
@@ -362,7 +362,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1125096990332608}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.45, y: 1.4, z: 0}
+  m_LocalPosition: {x: -1.5, y: 1.4, z: 0}
   m_LocalScale: {x: 0.1178, y: 1.9896, z: 1}
   m_Children: []
   m_Father: {fileID: 4663525548880776}
@@ -1057,7 +1057,7 @@ AudioSource:
   MinDistance: 1
   MaxDistance: 30
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
