@@ -21746,6 +21746,7 @@ GameObject:
   - component: {fileID: 965229710}
   - component: {fileID: 965229709}
   - component: {fileID: 965229711}
+  - component: {fileID: 965229712}
   m_Layer: 0
   m_Name: Storage2_UI
   m_TagString: Untagged
@@ -21857,6 +21858,19 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  keyCode: 113
+--- !u!65 &965229712
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 965229708}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 10, z: 20}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &972600426
 Prefab:
   m_ObjectHideFlags: 0
@@ -22329,6 +22343,7 @@ GameObject:
   - component: {fileID: 1000096233}
   - component: {fileID: 1000096232}
   - component: {fileID: 1000096234}
+  - component: {fileID: 1000096235}
   m_Layer: 0
   m_Name: PorterPipe_UI
   m_TagString: Untagged
@@ -22440,6 +22455,19 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  keyCode: 101
+--- !u!65 &1000096235
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1000096231}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 10, z: 20}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1001 &1002699242
 Prefab:
   m_ObjectHideFlags: 0
@@ -22571,6 +22599,7 @@ GameObject:
   - component: {fileID: 1033757983}
   - component: {fileID: 1033757982}
   - component: {fileID: 1033757984}
+  - component: {fileID: 1033757985}
   m_Layer: 0
   m_Name: Storage_UI
   m_TagString: Untagged
@@ -22682,6 +22711,19 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  keyCode: 101
+--- !u!65 &1033757985
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1033757981}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 3.2726514, y: 10, z: 20}
+  m_Center: {x: 3.4350271, y: 0, z: 0}
 --- !u!1 &1039990189
 GameObject:
   m_ObjectHideFlags: 0
@@ -22786,6 +22828,7 @@ GameObject:
   - component: {fileID: 1043271833}
   - component: {fileID: 1043271832}
   - component: {fileID: 1043271834}
+  - component: {fileID: 1043271835}
   m_Layer: 0
   m_Name: jump_UI
   m_TagString: Untagged
@@ -22897,6 +22940,19 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  keyCode: 32
+--- !u!65 &1043271835
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1043271831}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 14.877845, y: 10, z: 20}
+  m_Center: {x: 0.9295779, y: 0, z: 0}
 --- !u!1001 &1044069206
 Prefab:
   m_ObjectHideFlags: 0
@@ -34577,6 +34633,7 @@ GameObject:
   - component: {fileID: 1906937069}
   - component: {fileID: 1906937068}
   - component: {fileID: 1906937070}
+  - component: {fileID: 1906937071}
   m_Layer: 0
   m_Name: Sprint_UI
   m_TagString: Untagged
@@ -34688,6 +34745,19 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+  keyCode: 304
+--- !u!65 &1906937071
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1906937067}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 14.106021, y: 10, z: 20}
+  m_Center: {x: 0.20399013, y: 0, z: 0}
 --- !u!1001 &1907352058
 Prefab:
   m_ObjectHideFlags: 0
