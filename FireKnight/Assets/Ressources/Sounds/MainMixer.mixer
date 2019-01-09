@@ -42,6 +42,7 @@ AudioMixerController:
     - 3b8a58ce7a0b978409ae86ffdcb26ca6
     - 182c3331055462843afaeea164826874
     - e30a3a42a23f63a49b890447075c3377
+    - 6ae87e147853acd4cb0e9bf27addca54
     name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
@@ -137,7 +138,8 @@ AudioMixerGroupController:
   m_Name: Enemies
   m_AudioMixer: {fileID: 24100000}
   m_GroupID: 01057a37d60f05f469dde9a1d6f2aab2
-  m_Children: []
+  m_Children:
+  - {fileID: 243209370497272410}
   m_Volume: 90b7e2799767dcf4a98b4c4450aaa283
   m_Pitch: 521cbeab88dcee443bd4769a990e4a20
   m_Effects:
@@ -159,6 +161,23 @@ AudioMixerGroupController:
   m_Pitch: 6a82767f65c3f7e47958cd4ba764607e
   m_Effects:
   - {fileID: 244643888475475108}
+  m_UserColorIndex: 0
+  m_Mute: 0
+  m_Solo: 0
+  m_BypassEffects: 0
+--- !u!243 &243209370497272410
+AudioMixerGroupController:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Pickgoatsteps
+  m_AudioMixer: {fileID: 24100000}
+  m_GroupID: 6ae87e147853acd4cb0e9bf27addca54
+  m_Children: []
+  m_Volume: 7b679b0abaacb6145ae116ac41c0a504
+  m_Pitch: 7b60bc71e84c0a346a6d11e0f085d918
+  m_Effects:
+  - {fileID: 244561938855054362}
   m_UserColorIndex: 0
   m_Mute: 0
   m_Solo: 0
@@ -254,6 +273,19 @@ AudioMixerEffectController:
   m_EffectID: 23111dae56c3f8648b826b2b3b4f0070
   m_EffectName: Attenuation
   m_MixLevel: ff4d64abbd08d294e8d2a3cd1c9db0e6
+  m_Parameters: []
+  m_SendTarget: {fileID: 0}
+  m_EnableWetMix: 0
+  m_Bypass: 0
+--- !u!244 &244561938855054362
+AudioMixerEffectController:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_EffectID: b3b84b1f5eba2f847b0f4a02659d3cb5
+  m_EffectName: Attenuation
+  m_MixLevel: 11acb94a0fab8b249953c0a028ff8530
   m_Parameters: []
   m_SendTarget: {fileID: 0}
   m_EnableWetMix: 0
