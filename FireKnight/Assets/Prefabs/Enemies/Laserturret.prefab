@@ -631,7 +631,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isVisible: 0
-  color: {r: 0.4669811, g: 0.96806335, b: 1, a: 1}
+  color: {r: 0.5896226, g: 0.97309005, b: 1, a: 1}
   lightcone: {fileID: 2100000, guid: 0a2af753346a5dd41ba279b364b90a1f, type: 2}
   graycone: {fileID: 2100000, guid: d3adb4511e9675848bd903c52b5c528c, type: 2}
 --- !u!114 &114591797601069966
