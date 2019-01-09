@@ -2453,6 +2453,7 @@ MonoBehaviour:
   RechargeMinTime: 2
   walkSound: {fileID: 8300000, guid: 6ea4cb95902258445a55abec3751cd78, type: 3}
   succSound: {fileID: 8300000, guid: 993594257200f804fae6d005ac0bca82, type: 3}
+  deathSound: {fileID: 8300000, guid: 71d65d5485070f04fbd14eb474da313a, type: 3}
   rb: {fileID: 0}
 --- !u!114 &114915356271204514
 MonoBehaviour:
