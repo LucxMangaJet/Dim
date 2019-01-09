@@ -27,8 +27,8 @@ namespace Dim
         private void OnTriggerEnter(Collider other)
         {
             if (other.tag == "Player")
-            {
-
+            { 
+                LevelHandler.ShouldLoadFromSaveFile(null);
                 GlobalMethods.LoadSceneAndSaveProgress(sceneToLoadIndex);
             }
         }

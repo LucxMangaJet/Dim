@@ -44,6 +44,7 @@ namespace Dim
             instance.currentLevel = level;
             instance.player = player;
             instance.camera = camera;
+
         }
 
         public static Level GetCurrentLevel()
@@ -53,8 +54,17 @@ namespace Dim
 
         public static void ShouldLoadFromSaveFile( SaveFile save)
         {
-            instance.saveFile = save;
-            instance.shouldLoadFromSavefile = true;
+            if(save == null)
+            {
+                instance.saveFile = null;
+                instance.shouldLoadFromSavefile = false;
+            }
+            else
+            {
+                instance.saveFile = save;
+                instance.shouldLoadFromSavefile = true;
+            }
+
         }
 
         public static bool IsLoadedFromSaveFile()
@@ -81,13 +91,11 @@ namespace Dim
                     }
                     else
                     {
-                        instance.shouldLoadFromSavefile = false;
+                        instance.player.position = instance.currentLevel.StartPosition;
+                        instance.currentCheckPointIndex = 0;
+                        instance.player.GetComponent<Player.PlayerController>().EnergyAmount = instance.currentLevel.Checkpoints[0].Energy; 
                     }
                 }
-                
-                //else
-                instance.player.position = instance.currentLevel.StartPosition;
-                instance.player.GetComponent<Player.PlayerController>().EnergyAmount = instance.currentLevel.Checkpoints[0].Energy;
             }
             
         }
