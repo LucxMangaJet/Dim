@@ -12,6 +12,7 @@ namespace Dim.Visualize
     /// Custom Editor for the BaseInteraction Script
     /////////////////////////////////////////////////
     [CustomEditor(typeof(InteractionBase),true)]
+    [CanEditMultipleObjects]
     public class BaseInteractionEditor : Editor
     {
         public override void OnInspectorGUI()

@@ -13,7 +13,10 @@ namespace Dim.Visualize
         Animator an;
         Dim.Player.PlayerController controller;
         [SerializeField] Transform orient;
+        [Range(0,1)]
+        [SerializeField] float intensity;
 
+        [SerializeField] bool deactivate;
         void Start()
         {
             an = GetComponent<Animator>();
@@ -25,7 +28,10 @@ namespace Dim.Visualize
 
         private void Update()
         {
-            an.Play("1",0,Mathf.Clamp((controller.EnergyAmount/5),0,0.9999999f));
+            if (!deactivate)
+            {
+                an.Play("1", 0, intensity);
+            }
             transform.position = orient.position;
         }
     }

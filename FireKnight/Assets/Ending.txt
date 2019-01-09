@@ -2,9 +2,9 @@ Phase 1
 
 All lights and particle of Maincharcater increase 10%
 
-ImportantLight1 AND ImportantLight2 turns off
+ImportantLight1 AND ImportantLight2 turns off OK
 
-GearOnFront stops
+ GearOnFront stops OK
 
 
 
@@ -16,11 +16,11 @@ Camera moves slightly once
 
 All lights and particle of Maincharcater increase 20%
 
-EndingSurroundParticle1 stops
+EndingSurroundParticle1 stops OK
 
 Animation of  EndingEnergy Source increases by 10-20% (slight but visible change)
 
-dustfalling1 (particle system) Burst
+dustfalling1 (particle system) Burst OK?
  
 
 __________________________________________________________
@@ -30,13 +30,13 @@ Camera moves once
 
 All lights and particle of Maincharcater increase 20% and Range of lights doubles
 
-EndingSurroundParticle2 stops
-
-ImportantLight3 AND ImportantLight4 turns off
+EndingSurroundParticle2 stops OK
+ 
+ImportantLight3 AND ImportantLight4 turns off OK
 
 Animation of  EndingEnergy Source increases by 10-20% (slight but visible change)
 
-dustfalling1 (particle system) Burst
+dustfalling1 (particle system) Burst OK?
 
 
 
@@ -46,13 +46,13 @@ Phase 4
 
 Camera moves a lot once
 
-dustfalling1 (particle system) Burst
+dustfalling1 (particle system) Burst OK?
 
 All lights and particle of Maincharcater increase 100%
 
-EndingSurroundParticle3 stops
+EndingSurroundParticle3 stops OK
 
-All lights turn out
+All lights turn out OK
 
 only Maincharacter alone
 

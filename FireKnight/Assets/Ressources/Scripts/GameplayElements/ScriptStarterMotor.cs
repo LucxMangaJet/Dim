@@ -11,7 +11,6 @@ namespace Dim.Interaction
     public class ScriptStarterMotor : InteractionBase
     {
 
-
         [SerializeField] byte activationMinEnergy;
         [SerializeField] Behaviour script;
 
