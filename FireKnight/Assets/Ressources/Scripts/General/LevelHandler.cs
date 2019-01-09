@@ -91,6 +91,13 @@ namespace Dim
                         ShouldLoadFromSaveFile(null);
                         return;
                     }
+                    else
+                    {
+                        ShouldLoadFromSaveFile(null);
+                        Debug.LogError("LevelHandler is trying to load from savefile, but this is NOT the scene in the save file. FORCING QUIT");
+                        GlobalMethods.QuitGame();
+                        
+                    }
                 }
                 else
                 {
