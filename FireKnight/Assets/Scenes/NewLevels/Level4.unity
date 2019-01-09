@@ -36052,6 +36052,11 @@ Prefab:
       propertyPath: rhinoTrainBase
       value: 
       objectReference: {fileID: 2040908497}
+    - target: {fileID: 82174353715179066, guid: 3e8e1546ec7772f43be6fb23a860f220,
+        type: 2}
+      propertyPath: MaxDistance
+      value: 17
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3e8e1546ec7772f43be6fb23a860f220, type: 2}
   m_IsPrefabAsset: 0
@@ -55530,6 +55535,11 @@ Prefab:
     - target: {fileID: 4180477042596004, guid: 648150b2f712bd84f93689f983c676d7, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 172.94402
+      objectReference: {fileID: 0}
+    - target: {fileID: 82727209255491112, guid: 648150b2f712bd84f93689f983c676d7,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 648150b2f712bd84f93689f983c676d7, type: 2}
