@@ -29,6 +29,11 @@ namespace Dim.Interaction
             {
                 if (!active)
                 {
+                    if (Time.time < 2)
+                    {
+                        active = true;
+                        return;
+                    }
                     if (coroutine != null)
                     {
                         StopCoroutine(coroutine);
