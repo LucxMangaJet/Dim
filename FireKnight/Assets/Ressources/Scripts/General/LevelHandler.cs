@@ -7,6 +7,7 @@ namespace Dim
     /////////////////////////////////////////////////
     /// SIngleton, stores Level Important informations such as Player, Camera and checkpoints.
     /////////////////////////////////////////////////
+    
     public class LevelHandler
     {
         private static LevelHandler instance;
@@ -83,21 +84,21 @@ namespace Dim
             {
                 if (instance.shouldLoadFromSavefile)
                 {
-                    if(UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == instance.saveFile.SceneName)
+                    if (UnityEngine.SceneManagement.SceneManager.GetActiveScene().name == instance.saveFile.SceneName)
                     {
                         instance.player.position = instance.currentLevel.Checkpoints[instance.saveFile.CheckPointReached].transform.position;
                         instance.player.GetComponent<Player.PlayerController>().EnergyAmount = instance.currentLevel.Checkpoints[instance.saveFile.CheckPointReached].Energy;
+                        ShouldLoadFromSaveFile(null);
                         return;
                     }
-                    else
-                    {
-                        instance.player.position = instance.currentLevel.StartPosition;
-                        instance.currentCheckPointIndex = 0;
-                        instance.player.GetComponent<Player.PlayerController>().EnergyAmount = instance.currentLevel.Checkpoints[0].Energy; 
-                    }
+                }
+                else
+                {
+                    instance.player.position = instance.currentLevel.StartPosition;
+                    instance.currentCheckPointIndex = 0;
+                    instance.player.GetComponent<Player.PlayerController>().EnergyAmount = instance.currentLevel.Checkpoints[0].Energy;
                 }
             }
-            
         }
 
        
