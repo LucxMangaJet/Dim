@@ -22,12 +22,11 @@ namespace Dim {
         {
             if (Mathf.Abs(collision.relativeVelocity.y) > requiredVerticalSpeed)
             {
-                if(tag == "Player")
-                {
-                    VisualDestructionHandler.extraForceTimeStamp = Time.time;
-                    VisualDestructionHandler.extraForce = -collision.relativeVelocity;
-                    VisualDestructionHandler.extraForceTarget = gameObject;
-                }
+
+                VisualDestructionHandler.extraForceTimeStamp = Time.time;
+                VisualDestructionHandler.extraForce = -collision.relativeVelocity;
+                VisualDestructionHandler.extraForceTarget = gameObject;
+                
 
                 GetComponent<IGameObjectDamageTaker>().TakeDamage();
             }
