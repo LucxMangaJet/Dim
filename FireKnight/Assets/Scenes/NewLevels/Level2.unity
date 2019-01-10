@@ -43961,7 +43961,7 @@ Prefab:
     - target: {fileID: 114591797601069966, guid: 978e601554bd7a242bb7ad3dbf42a7b0,
         type: 2}
       propertyPath: detectionRange
-      value: 6.5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4001401022650704, guid: 978e601554bd7a242bb7ad3dbf42a7b0, type: 2}
       propertyPath: m_LocalScale.x
@@ -43978,6 +43978,11 @@ Prefab:
     - target: {fileID: 4529364530557852, guid: 978e601554bd7a242bb7ad3dbf42a7b0, type: 2}
       propertyPath: m_LocalRotation.w
       value: 5.1363367e-17
+      objectReference: {fileID: 0}
+    - target: {fileID: 114591797601069966, guid: 978e601554bd7a242bb7ad3dbf42a7b0,
+        type: 2}
+      propertyPath: detectionBaseRadius
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 978e601554bd7a242bb7ad3dbf42a7b0, type: 2}
