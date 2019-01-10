@@ -23872,15 +23872,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4905491091168358, guid: 2d5fba61727f4cd47bc23bb1a192041c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -3.74
+      value: -4
       objectReference: {fileID: 0}
     - target: {fileID: 4905491091168358, guid: 2d5fba61727f4cd47bc23bb1a192041c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.25000006
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4905491091168358, guid: 2d5fba61727f4cd47bc23bb1a192041c, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 13.655001
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4905491091168358, guid: 2d5fba61727f4cd47bc23bb1a192041c, type: 2}
       propertyPath: m_LocalRotation.x
@@ -38739,7 +38739,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   Storage: {fileID: 1613699697}
-  activationEnergy: 3
+  activationEnergy: 4
   exactEnergy: 1
   changeVolume: 1
   volumeLevel: 0
@@ -38757,10 +38757,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   Storage: {fileID: 1613699697}
-  activationMinEnergy: 4
+  activationMinEnergy: 5
   script: {fileID: 937945845}
   smooth: 1
-  smoothFactor: 0.01
+  smoothFactor: 0.003
 --- !u!4 &939819296 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4882642859727074, guid: f6ab45af2372b0147806a2082dca8552,
@@ -44214,15 +44214,15 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4905491091168358, guid: 2d5fba61727f4cd47bc23bb1a192041c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -8.28
+      value: -8
       objectReference: {fileID: 0}
     - target: {fileID: 4905491091168358, guid: 2d5fba61727f4cd47bc23bb1a192041c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0.25000006
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4905491091168358, guid: 2d5fba61727f4cd47bc23bb1a192041c, type: 2}
       propertyPath: m_LocalPosition.z
-      value: 13.610001
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 4905491091168358, guid: 2d5fba61727f4cd47bc23bb1a192041c, type: 2}
       propertyPath: m_LocalRotation.x
@@ -46662,10 +46662,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   Storage: {fileID: 1613699697}
-  activationMinEnergy: 4
+  activationMinEnergy: 5
   script: {fileID: 1159723392}
   smooth: 1
-  smoothFactor: 0.01
+  smoothFactor: 0.003
 --- !u!114 &1159723392 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114768864035662208, guid: 648150b2f712bd84f93689f983c676d7,
@@ -46685,7 +46685,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   Storage: {fileID: 1613699697}
-  activationEnergy: 3
+  activationEnergy: 4
   exactEnergy: 1
   changeVolume: 1
   volumeLevel: 0
@@ -53020,10 +53020,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   Storage: {fileID: 1613699697}
-  activationMinEnergy: 4
+  activationMinEnergy: 5
   script: {fileID: 1340643790}
   smooth: 1
-  smoothFactor: 0.01
+  smoothFactor: 0.003
 --- !u!114 &1340643790 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114768864035662208, guid: 648150b2f712bd84f93689f983c676d7,
@@ -53043,7 +53043,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   Storage: {fileID: 1613699697}
-  activationEnergy: 3
+  activationEnergy: 4
   exactEnergy: 1
   changeVolume: 1
   volumeLevel: 0
@@ -53795,7 +53795,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   Storage: {fileID: 1613699697}
-  activationEnergy: 3
+  activationEnergy: 4
   exactEnergy: 1
   changeVolume: 1
   volumeLevel: 0
@@ -53813,10 +53813,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   Storage: {fileID: 1613699697}
-  activationMinEnergy: 4
+  activationMinEnergy: 5
   script: {fileID: 1363627390}
   smooth: 1
-  smoothFactor: 0.01
+  smoothFactor: 0.003
 --- !u!82 &1363627389 stripped
 AudioSource:
   m_CorrespondingSourceObject: {fileID: 82727209255491112, guid: 648150b2f712bd84f93689f983c676d7,
@@ -63027,7 +63027,7 @@ AudioSource:
   DopplerLevel: 1
   MinDistance: 1
   MaxDistance: 500
-  Pan2D: 0
+  Pan2D: -0.872
   rolloffMode: 0
   BypassEffects: 0
   BypassListenerEffects: 0
@@ -66450,8 +66450,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   Storage: {fileID: 1613699697}
-  activationMinEnergy: 4
-  timeToToggle: 2
+  activationMinEnergy: 5
+  timeToToggle: 4
 --- !u!108 &1720012858
 Light:
   m_ObjectHideFlags: 0
@@ -67073,7 +67073,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   Storage: {fileID: 1613699697}
-  activationMinEnergy: 4
+  activationMinEnergy: 5
   timeToToggle: 2
   highSpeed: 1
   lowSpeed: 0
@@ -70765,10 +70765,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   Storage: {fileID: 1613699697}
-  activationMinEnergy: 4
+  activationMinEnergy: 5
   script: {fileID: 1856464309}
   smooth: 1
-  smoothFactor: 0.01
+  smoothFactor: 0.003
 --- !u!114 &1856464307
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70782,7 +70782,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   Storage: {fileID: 1613699697}
-  activationEnergy: 3
+  activationEnergy: 4
   exactEnergy: 1
   changeVolume: 1
   volumeLevel: 0
@@ -73596,10 +73596,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   Storage: {fileID: 1613699697}
-  activationMinEnergy: 4
+  activationMinEnergy: 5
   script: {fileID: 1918019182}
   smooth: 1
-  smoothFactor: 0.01
+  smoothFactor: 0.003
 --- !u!114 &1918019182 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 114768864035662208, guid: 648150b2f712bd84f93689f983c676d7,
@@ -73619,7 +73619,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   Storage: {fileID: 1613699697}
-  activationEnergy: 3
+  activationEnergy: 4
   exactEnergy: 1
   changeVolume: 1
   volumeLevel: 0
@@ -78745,7 +78745,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   debug: 0
   Storage: {fileID: 1613699697}
-  activationMinEnergy: 4
+  activationMinEnergy: 5
   timeToToggle: 2
   highSpeed: 1
   lowSpeed: 0
