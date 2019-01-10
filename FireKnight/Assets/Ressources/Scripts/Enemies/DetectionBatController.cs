@@ -43,6 +43,11 @@ namespace Dim.Enemies
 
         public override void OnEnergyChange(byte newEnergy)
         {
+            if (Time.time < 0.5)
+            {
+                return;
+            }
+
             if( newEnergy>= minEnergyToPlaySound)
             {
                 PlaySound();
