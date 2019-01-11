@@ -26,10 +26,17 @@ namespace Dim {
         {
             if (other.tag == "Player")
             {
+                
+
                 if (LevelHandler.GetCurrentCheckPointIndex() <= checkPointIndex)
                 {
                     LevelHandler.SetCurrentCheckPointIndex(checkPointIndex);
                     GlobalMethods.SaveToSaveFile();
+                }
+
+                if (checkPointIndex == 0)
+                {
+                    GameObject.FindGameObjectWithTag("LEVEL_COLLECTOR").GetComponent<FaderEffect>().FadeIn(Color.black, 3);
                 }
             }
     }

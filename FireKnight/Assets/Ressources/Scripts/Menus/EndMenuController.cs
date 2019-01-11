@@ -16,6 +16,11 @@ namespace Dim.Menu
     public class EndMenuController : MonoBehaviour
     {
 
+        private void Start()
+        {
+            GetComponent<FaderEffect>().FadeIn(Color.white, 15);
+        }
+
         //quit
         public void Quit()
         {

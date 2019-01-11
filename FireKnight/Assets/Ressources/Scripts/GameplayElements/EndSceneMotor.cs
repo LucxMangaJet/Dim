@@ -18,33 +18,21 @@ namespace Dim.Interaction
 
         public override void OnEnergyChange(byte newEnergy)
         {
-            Debug.Log("AAA");
+
             if (newEnergy == activationEnergy)
             {
-                Debug.Log("V");
-                StartCoroutine(endScene());
-
+                GameObject.FindGameObjectWithTag("LEVEL_COLLECTOR").GetComponent<FaderEffect>().FadeOut(Color.white, timeToToggle);
+                Invoke("Load", timeToToggle);
             }      
         }
 
-
-        private IEnumerator endScene()
+        private void Load()
         {
-
-            float counter = 0;
-
-            while (counter < timeToToggle)
-            {
-                image.color = Color.Lerp( new Color(1,1,1,0),Color.white, counter / timeToToggle);
-
-                yield return null;
-                counter += Time.deltaTime;
-            }
-
             LevelHandler.ShouldLoadFromSaveFile(null);
             GlobalMethods.LoadSceneAndSaveProgress(sceneToLoadIndex);
+        } 
 
-        }
+
 
     }
 }

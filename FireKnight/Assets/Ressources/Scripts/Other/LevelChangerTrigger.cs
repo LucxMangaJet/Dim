@@ -28,8 +28,8 @@ namespace Dim
         {
             if (other.tag == "Player")
             {
-                LevelHandler.GetCamera().GetComponent<Player.CameraBehavior>().SetToStatic(new Vector3(100000,100000,100000), Vector3.zero);
-                Invoke("LoadScene", 4);
+                GameObject.FindGameObjectWithTag("LEVEL_COLLECTOR").GetComponent<FaderEffect>().FadeOut(Color.black, 3);
+                Invoke("LoadScene", 3);
             }
         }
 
