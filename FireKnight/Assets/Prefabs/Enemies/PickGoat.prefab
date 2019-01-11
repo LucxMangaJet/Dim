@@ -2940,6 +2940,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8439eaa8b79cea744a8e82c4edfa7928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cooldown: 0.1
 --- !u!114 &114255065286650432
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2951,6 +2952,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8439eaa8b79cea744a8e82c4edfa7928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cooldown: 0.1
 --- !u!114 &114288945572896404
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2962,6 +2964,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8439eaa8b79cea744a8e82c4edfa7928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cooldown: 0.5
 --- !u!114 &114325247025096124
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2988,6 +2991,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8439eaa8b79cea744a8e82c4edfa7928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cooldown: 0.3
 --- !u!114 &114413951692158246
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2999,6 +3003,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8439eaa8b79cea744a8e82c4edfa7928, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cooldown: 0.3
 --- !u!114 &114457223777951184
 MonoBehaviour:
   m_ObjectHideFlags: 1

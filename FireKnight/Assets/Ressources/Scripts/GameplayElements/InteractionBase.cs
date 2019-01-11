@@ -24,7 +24,7 @@ namespace Dim.Interaction
             }
             else
             {
-                Debug.LogError("No Storage connected to " + gameObject.name);
+                Debug.Log("No Storage connected to " + gameObject.name);
             }
         }
 

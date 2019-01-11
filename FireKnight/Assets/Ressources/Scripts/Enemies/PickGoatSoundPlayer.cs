@@ -14,7 +14,8 @@ namespace Dim.Enemies
     //    [SerializeField] private float Loudness = 5;
     //    [SerializeField] private float Range = 10;
         private float timeStamp;
-        private float cooldown = 0.1f;
+
+        [SerializeField] float cooldown = 0.1f;
 
         AudioSource source;
 
