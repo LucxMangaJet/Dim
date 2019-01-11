@@ -26670,6 +26670,52 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4920076322648176, guid: 725e25d991bc1314b90b97422b0185cb,
     type: 2}
   m_PrefabInternal: {fileID: 1272479535}
+--- !u!1 &1318736091 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1308302508028538, guid: 69e354b8f6d1fc24682855c7524d0379,
+    type: 2}
+  m_PrefabInternal: {fileID: 1955222715}
+--- !u!114 &1318736092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1318736091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dfe7f324623f8584fb7a2631f3f31988, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  debug: 0
+  Storage: {fileID: 2035705189}
+  activationMinEnergy: 1
+  cameraShakeOnIncrease: 0
+  cameraShakeOnDecrease: 1
+  shakeLength: 5.5
+  shakeIntensityCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0.054527283
+      inSlope: -0.0050632902
+      outSlope: -0.0050632902
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9875
+      value: 0.049527284
+      inSlope: -0.0059568426
+      outSlope: -0.0059568426
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.2125
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &1322396690 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4380274231077942, guid: 41773a1eab16a0749840f6bfed814f94,
