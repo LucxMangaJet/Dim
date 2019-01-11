@@ -10,7 +10,8 @@ namespace Dim.Interaction
         [SerializeField] byte activationMinEnergy;
 
         [SerializeField] bool cameraShakeOnIncrease, cameraShakeOnDecrease;
-        [SerializeField] float shakeLength, shakeIntensity;
+        [SerializeField] float shakeLength;
+        [SerializeField] AnimationCurve shakeIntensityCurve;
 
         bool active;
         Player.CameraBehavior cam;
@@ -55,7 +56,7 @@ namespace Dim.Interaction
 
         private void ShakeCam()
         {
-            cam.StartCameraShake(shakeLength, shakeIntensity);
+            cam.StartCameraShake(shakeLength, shakeIntensityCurve);
         }
 
     }
