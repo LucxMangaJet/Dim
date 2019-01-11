@@ -27,11 +27,19 @@ namespace Dim
         private void OnTriggerEnter(Collider other)
         {
             if (other.tag == "Player")
-            { 
-                LevelHandler.ShouldLoadFromSaveFile(null);
-                GlobalMethods.LoadSceneAndSaveProgress(sceneToLoadIndex);
+            {
+                LevelHandler.GetCamera().GetComponent<Player.CameraBehavior>().SetToStatic(new Vector3(100000,100000,100000), Vector3.zero);
+                Invoke("LoadScene", 4);
             }
         }
+
+        private void LoadScene()
+        {
+            LevelHandler.ShouldLoadFromSaveFile(null);
+            GlobalMethods.LoadSceneAndSaveProgress(sceneToLoadIndex);
+        }
     }
+
+   
 }
 
