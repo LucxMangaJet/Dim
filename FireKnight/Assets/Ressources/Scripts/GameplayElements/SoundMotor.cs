@@ -12,8 +12,11 @@ namespace Dim.Interaction {
 
         [SerializeField] byte activationEnergy;
         [SerializeField] bool exactEnergy;
+        [SerializeField] bool changeVolume;
+        [SerializeField] float volumeLevel;
 
         [SerializeField] AudioSource audioSource;
+
         bool active;
 
 
@@ -30,7 +33,17 @@ namespace Dim.Interaction {
                 if (!active)
                 {
                     active = true;
-                    audioSource.Play();
+
+                    if (changeVolume)
+                    {
+                        audioSource.volume = volumeLevel;
+                    }
+
+                    if (!audioSource.isPlaying)
+                    {
+                        audioSource.Play();
+                    }
+
                 }
             }
             else

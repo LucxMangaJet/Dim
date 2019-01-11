@@ -39,6 +39,7 @@ namespace Dim.Player
         private Camera cam;
 
         private bool isSnapped;
+        private bool inCamShake;
 
         //CutScenes
         Coroutine cutSceneCoroutine;
@@ -100,7 +101,7 @@ namespace Dim.Player
         {
             if (isSnapped)
             {
-                transform.position = targetPos;
+                transform.localPosition = targetPos;
             }
             else
             {
@@ -113,11 +114,11 @@ namespace Dim.Player
 
                 if (dist < snapToDistance)
                 {
-                    transform.position = Vector3.Lerp(transform.position, targetPos, snaptransitionSpeed);
+                    transform.localPosition = Vector3.Lerp(transform.position, targetPos, snaptransitionSpeed);
                 }
                 else
                 {
-                    transform.position = Vector3.Lerp(transform.position, targetPos, transitionSpeed);
+                    transform.localPosition = Vector3.Lerp(transform.position, targetPos, transitionSpeed);
                 }
             }
             
@@ -168,6 +169,11 @@ namespace Dim.Player
         {
             cutSceneCoroutine = StartCoroutine(PlayCutScene(c));
             UnSnap();
+        }
+
+        public void  StartCameraShake(float time, float intensity)
+        {
+            StartCoroutine(ShakeCamera(time, intensity));
         }
 
         
@@ -233,6 +239,36 @@ namespace Dim.Player
             }
         }
 
+        private IEnumerator ShakeCamera(float time, float intensity)
+        {
+            if (inCamShake)
+            {
+                yield break;
+            }
+
+            inCamShake = true;
+
+
+            GameObject shaker = new GameObject("CAMSHAKE");
+            transform.parent = shaker.transform;
+
+
+            float counter = time;
+            while (counter > 0)
+            {
+                shaker.transform.position = Random.insideUnitCircle * intensity;
+                yield return null;
+                counter-= Time.deltaTime;
+            }
+
+            //unparent and destroy
+            transform.parent = null;
+            Destroy(shaker);
+
+            inCamShake = false;
+        }
+
+        
     }
 
 
