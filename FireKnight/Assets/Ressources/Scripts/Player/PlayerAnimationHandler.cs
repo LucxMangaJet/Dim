@@ -76,7 +76,7 @@ namespace Dim.Player
                         }
                         else
                         {
-                            if (xVel < pc.SprintSpeedCap)
+                            if (xVel < pc.SprintSpeedCap*0.8)
                             {
                                 if (InputController.GetCrouch(InputStateType.PRESSED))
                                 {
