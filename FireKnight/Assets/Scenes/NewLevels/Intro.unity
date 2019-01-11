@@ -7245,13 +7245,18 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 857114485}
     m_Modifications:
+    - target: {fileID: 114191326141666622, guid: 7db7ee3ac70176d43b30e854e778408e,
+        type: 2}
+      propertyPath: platformEnergyPositions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4663525548880776, guid: 7db7ee3ac70176d43b30e854e778408e, type: 2}
       propertyPath: m_LocalPosition.x
       value: 93
       objectReference: {fileID: 0}
     - target: {fileID: 4663525548880776, guid: 7db7ee3ac70176d43b30e854e778408e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 29
+      value: 24.15
       objectReference: {fileID: 0}
     - target: {fileID: 4663525548880776, guid: 7db7ee3ac70176d43b30e854e778408e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -7295,7 +7300,7 @@ Prefab:
     - target: {fileID: 114191326141666622, guid: 7db7ee3ac70176d43b30e854e778408e,
         type: 2}
       propertyPath: platformEnergyPositions.Array.data[1].z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114191326141666622, guid: 7db7ee3ac70176d43b30e854e778408e,
         type: 2}
@@ -7305,12 +7310,12 @@ Prefab:
     - target: {fileID: 114191326141666622, guid: 7db7ee3ac70176d43b30e854e778408e,
         type: 2}
       propertyPath: platformEnergyPositions.Array.data[0].y
-      value: -3
+      value: -3.82
       objectReference: {fileID: 0}
     - target: {fileID: 114191326141666622, guid: 7db7ee3ac70176d43b30e854e778408e,
         type: 2}
       propertyPath: platformEnergyPositions.Array.data[0].z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 114191326141666622, guid: 7db7ee3ac70176d43b30e854e778408e,
         type: 2}
