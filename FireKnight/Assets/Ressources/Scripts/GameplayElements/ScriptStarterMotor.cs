@@ -20,7 +20,7 @@ namespace Dim.Interaction
 
         MovingEnvironmentController motor;
 
-        float smoothTarget = 1f;
+        float? smoothTarget = null;
         bool active;
 
         void Start ()
@@ -40,7 +40,7 @@ namespace Dim.Interaction
 
         void FixedUpdate ()
         {
-            if (motor != null) {
+            if (motor != null && smoothTarget != null) {
                 if (motor.speed != smoothTarget)
                 {
                     if (motor.speed < smoothTarget)
@@ -48,7 +48,7 @@ namespace Dim.Interaction
                         motor.speed += smoothFactor;
                         if (motor.speed > smoothTarget)
                         {
-                            motor.speed = smoothTarget;
+                            motor.speed = (float)smoothTarget;
                         }
                     }
                     else
@@ -56,7 +56,7 @@ namespace Dim.Interaction
                         motor.speed -= smoothFactor;
                         if (motor.speed < smoothTarget)
                         {
-                            motor.speed = smoothTarget;
+                            motor.speed = (float)smoothTarget;
                         }
                     }
                 }
