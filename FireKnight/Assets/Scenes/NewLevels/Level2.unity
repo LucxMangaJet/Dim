@@ -4430,13 +4430,18 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 325035834}
     m_Modifications:
+    - target: {fileID: 114191326141666622, guid: 7db7ee3ac70176d43b30e854e778408e,
+        type: 2}
+      propertyPath: platformEnergyPositions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4663525548880776, guid: 7db7ee3ac70176d43b30e854e778408e, type: 2}
       propertyPath: m_LocalPosition.x
       value: 45
       objectReference: {fileID: 0}
     - target: {fileID: 4663525548880776, guid: 7db7ee3ac70176d43b30e854e778408e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 20.001
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 4663525548880776, guid: 7db7ee3ac70176d43b30e854e778408e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -9019,12 +9024,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4096979202304374, guid: 22ded69384216134db568e41a66b6715,
     type: 2}
   m_PrefabInternal: {fileID: 1349762899}
---- !u!114 &373497906 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 114640959524053954, guid: 871c7020cb47e3a4c84c0e51b271896c,
-    type: 2}
-  m_PrefabInternal: {fileID: 820069727}
-  m_Script: {fileID: 11500000, guid: 5ee2ffc0aa64a4d4d8d7a313a5d6a276, type: 3}
 --- !u!4 &375074481 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4920076322648176, guid: 725e25d991bc1314b90b97422b0185cb,
@@ -17702,6 +17701,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 325035834}
     m_Modifications:
+    - target: {fileID: 114191326141666622, guid: 7db7ee3ac70176d43b30e854e778408e,
+        type: 2}
+      propertyPath: platformEnergyPositions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4663525548880776, guid: 7db7ee3ac70176d43b30e854e778408e, type: 2}
       propertyPath: m_LocalPosition.x
       value: 45
@@ -26860,7 +26864,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1134543831}
   - component: {fileID: 1134543834}
-  - component: {fileID: 1134543832}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -26885,23 +26888,6 @@ Transform:
   m_Father: {fileID: 325035834}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -186.18, z: 0}
---- !u!114 &1134543832
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1134543830}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9d1a8ed111d45ba4ab2e2a43b648316c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  debug: 0
-  Storage: {fileID: 373497906}
-  activationEnergy: 0
-  exactEnergy: 0
-  setTrigger: 0
-  triggerName: 
 --- !u!95 &1134543834
 Animator:
   serializedVersion: 3
@@ -35900,6 +35886,11 @@ Prefab:
       propertyPath: previousSection
       value: 
       objectReference: {fileID: 1069384454}
+    - target: {fileID: 114552263397506168, guid: 9ffb2bebdc5d2a046b8ec390054371e8,
+        type: 2}
+      propertyPath: nextSection
+      value: 
+      objectReference: {fileID: 1276854775}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ffb2bebdc5d2a046b8ec390054371e8, type: 2}
   m_IsPrefabAsset: 0
@@ -41639,6 +41630,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 325035834}
     m_Modifications:
+    - target: {fileID: 114191326141666622, guid: 7db7ee3ac70176d43b30e854e778408e,
+        type: 2}
+      propertyPath: platformEnergyPositions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4663525548880776, guid: 7db7ee3ac70176d43b30e854e778408e, type: 2}
       propertyPath: m_LocalPosition.x
       value: -20
@@ -42102,6 +42098,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 325035834}
     m_Modifications:
+    - target: {fileID: 114191326141666622, guid: 7db7ee3ac70176d43b30e854e778408e,
+        type: 2}
+      propertyPath: platformEnergyPositions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4663525548880776, guid: 7db7ee3ac70176d43b30e854e778408e, type: 2}
       propertyPath: m_LocalPosition.x
       value: 61
@@ -43508,6 +43509,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 325035834}
     m_Modifications:
+    - target: {fileID: 114191326141666622, guid: 7db7ee3ac70176d43b30e854e778408e,
+        type: 2}
+      propertyPath: platformEnergyPositions.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4663525548880776, guid: 7db7ee3ac70176d43b30e854e778408e, type: 2}
       propertyPath: m_LocalPosition.x
       value: 57
