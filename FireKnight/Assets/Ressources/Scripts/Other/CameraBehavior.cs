@@ -171,9 +171,9 @@ namespace Dim.Player
             UnSnap();
         }
 
-        public void  StartCameraShake(float time, float intensity)
+        public void  StartCameraShake(float time, AnimationCurve intensityCurve)
         {
-            StartCoroutine(ShakeCamera(time, intensity));
+            StartCoroutine(ShakeCamera(time, intensityCurve));
         }
 
         
@@ -239,7 +239,7 @@ namespace Dim.Player
             }
         }
 
-        private IEnumerator ShakeCamera(float time, float intensity)
+        private IEnumerator ShakeCamera(float time, AnimationCurve intensityCurve)
         {
             if (inCamShake)
             {
@@ -253,12 +253,12 @@ namespace Dim.Player
             transform.parent = shaker.transform;
 
 
-            float counter = time;
-            while (counter > 0)
+            float counter = 0;
+            while (counter < time)
             {
-                shaker.transform.position = Random.insideUnitCircle * intensity;
+                shaker.transform.position = Random.insideUnitCircle * intensityCurve.Evaluate(counter/time);
                 yield return null;
-                counter-= Time.deltaTime;
+                counter+= Time.deltaTime;
             }
 
             //unparent and destroy

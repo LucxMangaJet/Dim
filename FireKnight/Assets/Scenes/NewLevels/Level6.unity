@@ -27047,21 +27047,22 @@ AudioSource:
   m_GameObject: {fileID: 609594037}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 243934620458180326, guid: abcee07bc655fe947943e93575f62660,
+    type: 2}
   m_audioClip: {fileID: 8300000, guid: 3b1be42f9af086144932c6d5cf504c80, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.567
+  m_Volume: 1
   m_Pitch: 1
   Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
-  Priority: 149
+  Priority: 0
   DopplerLevel: 1
-  MinDistance: 4.407137
-  MaxDistance: 500
+  MinDistance: 0
+  MaxDistance: 30
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -27153,10 +27154,10 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 160
   DopplerLevel: 1
-  MinDistance: 4.4759502
-  MaxDistance: 500
+  MinDistance: 0
+  MaxDistance: 50
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 1
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -30618,8 +30619,40 @@ MonoBehaviour:
   activationMinEnergy: 1
   cameraShakeOnIncrease: 0
   cameraShakeOnDecrease: 1
-  shakeLength: 0.2
-  shakeIntensity: 0.1
+  shakeLength: 1
+  shakeIntensityCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.0014228821
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.48080948
+      value: 0.9930389
+      inSlope: 0.018803088
+      outSlope: 0.018803088
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.99005127
+      value: 0.012500763
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &721255245
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30636,8 +30669,40 @@ MonoBehaviour:
   activationMinEnergy: 4
   cameraShakeOnIncrease: 0
   cameraShakeOnDecrease: 1
-  shakeLength: 0.2
-  shakeIntensity: 0.1
+  shakeLength: 1
+  shakeIntensityCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: -0.0014228821
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    - serializedVersion: 3
+      time: 0.48080948
+      value: 0.9930389
+      inSlope: 0.018803088
+      outSlope: 0.018803088
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.99005127
+      value: 0.012500763
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &721255246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30655,7 +30720,12 @@ MonoBehaviour:
   cameraShakeOnIncrease: 0
   cameraShakeOnDecrease: 1
   shakeLength: 0.2
-  shakeIntensity: 0.1
+  shakeIntensityCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!114 &721255247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30673,7 +30743,12 @@ MonoBehaviour:
   cameraShakeOnIncrease: 0
   cameraShakeOnDecrease: 1
   shakeLength: 0.2
-  shakeIntensity: 0.1
+  shakeIntensityCurve:
+    serializedVersion: 2
+    m_Curve: []
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!4 &721965424 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4233935002082914, guid: 8b93181697f162140bfdac2760396e61,

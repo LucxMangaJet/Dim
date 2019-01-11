@@ -152,11 +152,7 @@ namespace Dim.Visualize
                 GameState.SetState((GameState.State)val);
             }
 
-            //CamShake
-            if (GUI.Button(new Rect(10, 450, ButtonWidth, ButtonHeight), "Shake Camera"))
-            {
-                LevelHandler.GetCamera().GetComponent<Player.CameraBehavior>().StartCameraShake(2, 0.4f);
-            }
+            
             //mixerVolumes
             GUI.Label(new Rect(300, 150, 100, 30), "Audio Mixer");
 

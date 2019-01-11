@@ -34,15 +34,26 @@ namespace Dim.Interaction {
                 {
                     active = true;
 
-                    if (changeVolume)
+                    if (Time.time < 0.5)
                     {
-                        audioSource.volume = volumeLevel;
+                        return;
                     }
 
-                    if (!audioSource.isPlaying)
+                    if (changeVolume)
                     {
-                        audioSource.Play();
+                        if (debug)
+                            Debug.Log("Setting volume to " + volumeLevel);
+                        audioSource.volume = volumeLevel;
                     }
+                    else
+                    {
+                        if (!audioSource.isPlaying)
+                        {
+                            audioSource.Play();
+                        }
+                    }
+
+
 
                 }
             }
@@ -50,9 +61,12 @@ namespace Dim.Interaction {
             {
                 if (active)
                 {
-
-                    audioSource.Stop();
-                
+                    if (!changeVolume)
+                    {
+                        audioSource.Stop();
+                    }
+                    
+                    active = false;
                 }
             }
         }
