@@ -54,6 +54,7 @@ namespace Dim.Enemies
                 cooldownTimeStamp = Time.time;
                 controller.transform.position = controller.Base.transform.position;
                 controller.rb.velocity = Vector3.zero;
+                controller.StopSound();
             }
         }
 
@@ -292,7 +293,8 @@ namespace Dim.Enemies
 
         private bool WalkOutOfRechargingToWalkToSound()
         {
-            if(controller.transform.position.z == 0)
+
+            if(Mathf.Abs(controller.transform.position.z) < 0.1)
             {
                 return true;
             }

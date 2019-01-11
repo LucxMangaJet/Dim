@@ -43,14 +43,10 @@ namespace Dim.Enemies
 
         public override void OnEnergyChange(byte newEnergy)
         {
-            if (Time.time < 0.5)
-            {
-                return;
-            }
 
             if( newEnergy>= minEnergyToPlaySound)
             {
-                PlaySound();
+                //PlaySound();
             }
         }
 
@@ -58,7 +54,7 @@ namespace Dim.Enemies
         {
             cooldownTimestamp = Time.time;
             animator.SetTrigger("isScreaming");
-
+            
             Invoke("Play", 1f);   
         }
 

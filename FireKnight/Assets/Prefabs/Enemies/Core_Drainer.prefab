@@ -2447,7 +2447,7 @@ MonoBehaviour:
   HearingCoolDown: 1
   SoundInterestLength: 5
   MovementCap: 2
-  MovementForce: 10000
+  MovementForce: 30000
   Base: {fileID: 0}
   IdleToWalkBackTime: 2
   RechargeMinTime: 2
