@@ -45,9 +45,8 @@ namespace Dim.Menu
 
             foreach (Resolution r in resolutions)
             {
-                if (r.width == Screen.currentResolution.width && r.height == Screen.currentResolution.height)
+                if (r.Equals(Screen.currentResolution))
                     myResIndx = options.Count;
-
 
                 options.Add(r.width + " x " + r.height);
             }

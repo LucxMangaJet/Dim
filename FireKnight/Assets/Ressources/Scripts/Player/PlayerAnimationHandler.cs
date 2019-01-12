@@ -13,15 +13,17 @@ namespace Dim.Player
     public class PlayerAnimationHandler : MonoBehaviour
     {
         [SerializeField] float idleMaxSpeed;
+        [SerializeField] bool debug;
 
         Animator animator;
         PlayerStateMachine pSM;
         PlayerController pc;
         Rigidbody rb;
+        Dictionary<StateType, Tuple<string, string>> animationRelation;
 
         bool enable = false;
         bool oldDirIsLeft = false;
-        string currentSetVar ="";
+
         
         void Start()
         {
@@ -35,6 +37,17 @@ namespace Dim.Player
         {
             pSM = fSM;
             enable = true;
+
+            animationRelation = new Dictionary<StateType, Tuple<string, string>>();
+
+            animationRelation.Add(StateType.Idle, new Tuple<string, string>("isIdle", "MAIN_IDLE_ANIMATION"));
+            animationRelation.Add(StateType.Moving, new Tuple<string, string>("isWalking", "MAIN_ANIM_WALKING"));
+            animationRelation.Add(StateType.Crouch, new Tuple<string, string>("isCrouched", "MAIN_SNEAKIDLE_ANIMATION"));
+            animationRelation.Add(StateType.CrouchMoving, new Tuple<string, string>("isCrouchedWalking", "MAIN_SNEAKING_ANIMATON"));
+            animationRelation.Add(StateType.Sprint, new Tuple<string, string>("isRunning", "MAIN_RUNNING_ANIMATION"));
+            animationRelation.Add(StateType.Jump, new Tuple<string, string>("isJumping", "MAIN_JUMPING_NEW"));
+            animationRelation.Add(StateType.Emission, new Tuple<string, string>("isEmitting", "MAIN_EMIT_ANIM"));
+            animationRelation.Add(StateType.Absorption, new Tuple<string, string>("isAbsorbing", "MAIN_ABSORPTION"));
         }
 
 
@@ -42,80 +55,38 @@ namespace Dim.Player
         {
             if (enable)
             {
-                string toSet = "";
-                float xVel = Mathf.Floor(Mathf.Abs(rb.velocity.x));
-                bool moveLeft = rb.velocity.x < 0;
-                float yVel = Mathf.Abs(rb.velocity.y);
+                CheckAnimationAndUpdate();
+            }
+        }
 
-                if (pSM.CurrentState == StateType.Emission)
-                {
-                    toSet = "isEmitting";
-                }
-                else if (pSM.CurrentState == StateType.Absorption)
-                {
-                    toSet = "isAbsorbing";
-                }
-                else
-                {
-                    if (!pc.OnGround)
-                    {
-                        toSet = "isJumping";
-                    }
-                    else
-                    {
-                        if (xVel < idleMaxSpeed)
-                        {
-                            if (InputController.GetCrouch(InputStateType.PRESSED))
-                            {
-                                toSet = "isCrouched";
-                            }
-                            else
-                            {
-                                toSet = "isIdle";
-                            }
-                        }
-                        else
-                        {
-                            if (xVel < pc.SprintSpeedCap)
-                            {
-                                if (InputController.GetCrouch(InputStateType.PRESSED))
-                                {
-                                    toSet = "isCrouchedWalking";
-                                }
-                                else
-                                {
-                                    toSet = "isWalking";
-                                }
-                            }
-                            else
-                            {
-                                toSet = "isRunning";
-                            }
-                        }
-                    }
-                }
+        private void CheckAnimationAndUpdate()
+        {
 
-                if (xVel > idleMaxSpeed)
-                {
-                    if (moveLeft != oldDirIsLeft)
-                    {
-                        transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, (moveLeft ? -1:+1) *  Mathf.Abs(transform.localScale.z));
-                        oldDirIsLeft = moveLeft;
-                    }
-                }
+            if(!animator.GetCurrentAnimatorStateInfo(0).IsName(animationRelation[pSM.CurrentState].Item2)  && animator.GetAnimatorTransitionInfo(0).duration ==0)
+            {
+                
+                    if (debug)
+                        Debug.Log("[ANIMATOR] Trigger to " + animationRelation[pSM.CurrentState].Item2);
 
-                if(currentSetVar != toSet)
+                    animator.SetTrigger(animationRelation[pSM.CurrentState].Item1);
+                
+            }
+
+
+
+            //set player direction
+            float xVel = Mathf.Floor(Mathf.Abs(rb.velocity.x));
+            bool moveLeft = rb.velocity.x < 0;
+
+            if (xVel > idleMaxSpeed)
+            {
+                if (moveLeft != oldDirIsLeft)
                 {
-                    SetAnimationToState(toSet);
+                    transform.localScale = new Vector3(transform.localScale.x, transform.localScale.y, (moveLeft ? -1 : +1) * Mathf.Abs(transform.localScale.z));
+                    oldDirIsLeft = moveLeft;
                 }
             }
 
-        }
-
-        private void SetAnimationToState(string s)
-        {
-            animator.SetTrigger(s);
-            currentSetVar = s;
         }
 
     }

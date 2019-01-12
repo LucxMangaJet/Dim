@@ -200,7 +200,9 @@ namespace Dim.Visualize
             }
             else
             {
-                string s = "Sound Listeners: \n";
+                string s = "Shortcuts: \n F7: QuickSave \n F8: QuickLoad \n Esc: Return to main menu \n";
+
+                s += "Sound Listeners: \n";
 
                 foreach (var item in SoundMechanicHandler.GetListeners())
                 {

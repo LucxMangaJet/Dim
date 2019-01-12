@@ -122,7 +122,7 @@ namespace Dim.Interaction
 
             while(Vector3.Distance(transform.position, target) > 0.3)
             {
-                transform.position = transform.position + dir * MovementSpeed;
+                transform.position = transform.position + dir * MovementSpeed*Time.deltaTime*60;
                 yield return null;
             }
 

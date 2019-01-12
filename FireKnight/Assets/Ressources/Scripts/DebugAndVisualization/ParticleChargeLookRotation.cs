@@ -23,7 +23,7 @@ namespace Dim.Visualize
         // Update is called once per frame
         void Update()
         {
-            transform.Rotate(rotation * speedMultiplier);
+            transform.Rotate(rotation * speedMultiplier*Time.deltaTime*60);
         }
     }
 }
