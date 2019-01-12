@@ -241,6 +241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 114258920845900486}
+  audioMixer: {fileID: 24100000, guid: abcee07bc655fe947943e93575f62660, type: 2}
 --- !u!222 &222148978109356860
 CanvasRenderer:
   m_ObjectHideFlags: 1

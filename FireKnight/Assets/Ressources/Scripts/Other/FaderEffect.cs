@@ -2,10 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.Audio;
 
 public class FaderEffect : MonoBehaviour {
 
     [SerializeField] Image image;
+    [SerializeField] AudioMixer audioMixer;
 
     float time;
     Color invColor;
@@ -49,6 +51,9 @@ public class FaderEffect : MonoBehaviour {
 
         Color i, e;
 
+        float soundStart = isIn ? -80 : 0;
+        float soundEnd = isIn ? 0 : -80;
+
         if (isIn)
         {
             i = fullColor;
@@ -66,9 +71,14 @@ public class FaderEffect : MonoBehaviour {
         while (counter < time)
         {
             image.color = Color.Lerp(i, e, counter / time);
+
+            float val = Mathf.Lerp(soundStart, soundEnd, counter / time);
+            audioMixer.SetFloat("Volume", val);
             yield return null;
             counter += Time.deltaTime;
         }
+
         image.color = e;
+        audioMixer.SetFloat("Volume", soundEnd);
     }
 }
