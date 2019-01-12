@@ -51,7 +51,7 @@ namespace Dim.Enemies
                     controller.Energy = controller.Base.TryDepositQuantityOfEnergy(controller.Energy);
                 }
                 
-                cooldownTimeStamp = Time.time;
+                cooldownTimeStamp = Time.timeSinceLevelLoad;
                 controller.transform.position = controller.Base.transform.position;
                 controller.rb.velocity = Vector3.zero;
                 controller.StopSound();
@@ -61,7 +61,7 @@ namespace Dim.Enemies
 
         private bool RechargingToWalkOut()
         {
-            if(controller.LastSoundHeard != null && Time.time-cooldownTimeStamp >controller.RechargeMinTime)
+            if(controller.LastSoundHeard != null && Time.timeSinceLevelLoad-cooldownTimeStamp >controller.RechargeMinTime)
             {
                 return true;
             }
@@ -214,7 +214,7 @@ namespace Dim.Enemies
         {
             if (firstFrameOfStateChange)
             {
-                cooldownTimeStamp = Time.time;
+                cooldownTimeStamp = Time.timeSinceLevelLoad;
             }
 
 
@@ -222,7 +222,7 @@ namespace Dim.Enemies
 
         private bool PrepareToDrainToDrain()
         {
-            if((Time.time-cooldownTimeStamp) > controller.DrainPreparationTimeInSec)
+            if((Time.timeSinceLevelLoad-cooldownTimeStamp) > controller.DrainPreparationTimeInSec)
             {
                 return true;
             }
@@ -245,7 +245,7 @@ namespace Dim.Enemies
         {
             if (firstFrameOfStateChange)
             {
-                cooldownTimeStamp = Time.time;
+                cooldownTimeStamp = Time.timeSinceLevelLoad;
                 controller.AbsorptionArea.SetActive(true);
                 controller.DrainFlow.Active = true;
                 controller.PlayAbsorbtionSound();
@@ -255,7 +255,7 @@ namespace Dim.Enemies
 
         private bool DrainToIdle()
         {
-            if(Time.time-cooldownTimeStamp > controller.DrainDurationInSec)
+            if(Time.timeSinceLevelLoad-cooldownTimeStamp > controller.DrainDurationInSec)
             {
                 return true;
             }
@@ -317,7 +317,7 @@ namespace Dim.Enemies
         {
             if (firstFrameOfStateChange)
             {
-                cooldownTimeStamp = Time.time;
+                cooldownTimeStamp = Time.timeSinceLevelLoad;
                 controller.AbsorptionArea.SetActive(false);
                 controller.DrainFlow.Active = false;
                 controller.StopSound();
@@ -338,7 +338,7 @@ namespace Dim.Enemies
 
         private bool IdleToWalkToRecharge()
         {
-            return Time.time - cooldownTimeStamp > controller.IdleToWalkBackTime;
+            return Time.timeSinceLevelLoad - cooldownTimeStamp > controller.IdleToWalkBackTime;
         }
 
     }

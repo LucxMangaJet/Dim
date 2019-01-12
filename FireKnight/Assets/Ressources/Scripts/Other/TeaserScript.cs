@@ -22,7 +22,7 @@ namespace Dim.Visualize
             {
                 var item = clips[i];
 
-                if (Time.time > item.TimeStamp)
+                if (Time.timeSinceLevelLoad > item.TimeStamp)
                 {
                     audioSource.clip = item.Clip;
                     audioSource.volume = item.Volume;
@@ -38,7 +38,7 @@ namespace Dim.Visualize
             {
                 var item = addEnergyTimeStamp[i];
 
-                if (Time.time > item)
+                if (Time.timeSinceLevelLoad > item)
                 {
                     storage.RemoveEnergy();
                     addEnergyTimeStamp.RemoveAt(i);

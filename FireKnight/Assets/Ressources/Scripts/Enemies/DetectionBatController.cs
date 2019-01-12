@@ -34,7 +34,7 @@ namespace Dim.Enemies
         {
             if (Storage.Energy >= minEnergyToPlaySound)
             {
-                if (sound.Loudness >= repetitionMinimum && Time.time - cooldownTimestamp > cooldownTime)
+                if (sound.Loudness >= repetitionMinimum && Time.timeSinceLevelLoad - cooldownTimestamp > cooldownTime)
                 {
                     PlaySound();
                 }
@@ -52,7 +52,7 @@ namespace Dim.Enemies
 
         private void PlaySound()
         {
-            cooldownTimestamp = Time.time;
+            cooldownTimestamp = Time.timeSinceLevelLoad;
             animator.SetTrigger("isScreaming");
             
             Invoke("Play", 1f);   

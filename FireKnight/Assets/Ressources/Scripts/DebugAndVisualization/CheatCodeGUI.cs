@@ -181,7 +181,7 @@ namespace Dim.Visualize
             
 
             //Info text
-            if (Time.time - informationStringSetTimeStamp > 2)
+            if (Time.timeSinceLevelLoad - informationStringSetTimeStamp > 2)
             {
                 informationString = "";
             }
@@ -222,7 +222,7 @@ namespace Dim.Visualize
 
         private void Setinfo(string text)
         {
-            informationStringSetTimeStamp = Time.time;
+            informationStringSetTimeStamp = Time.timeSinceLevelLoad;
             informationString = text;
         }
 

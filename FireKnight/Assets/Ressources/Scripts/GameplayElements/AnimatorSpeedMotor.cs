@@ -27,7 +27,7 @@ public class AnimatorSpeedMotor : InteractionBase {
         {
             if (!active)
             {
-               if (Time.time < 2)
+               if (Time.timeSinceLevelLoad < 2)
                {
                    active = true;
                    return;

@@ -121,7 +121,7 @@ namespace Dim.Enemies
         {
             if (firstFrameOfStateChange)
             {
-                timeStamp = Time.time;
+                timeStamp = Time.timeSinceLevelLoad;
                 c.rb.velocity = Vector3.zero;
                 c.SetAnimatorWalk(false);
             }
@@ -129,7 +129,7 @@ namespace Dim.Enemies
 
         private bool WaitToWalkBack()
         {
-            if(Time.time-timeStamp > c.WaitTimeAfterPush)
+            if(Time.timeSinceLevelLoad-timeStamp > c.WaitTimeAfterPush)
             {
                 return true;
             }

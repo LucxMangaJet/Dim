@@ -59,7 +59,7 @@ namespace Dim.Enemies {
 
         private void Update()
         {
-            if(Storage.Energy == 0 && Time.time-timeStamp>coolDown)
+            if(Storage.Energy == 0 && Time.timeSinceLevelLoad-timeStamp>coolDown)
             {
                 isActive = true;
                 Transform t=null;
@@ -80,7 +80,7 @@ namespace Dim.Enemies {
                                 damageTaker.TakeDamage();
                             }
                         }
-                        timeStamp = Time.time;
+                        timeStamp = Time.timeSinceLevelLoad;
                     }
                 }
             } else

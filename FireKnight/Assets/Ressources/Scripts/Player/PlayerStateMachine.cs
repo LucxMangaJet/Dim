@@ -239,12 +239,12 @@ namespace Dim.Player
         {
             if (firstFrameOfStateChange)
             {
-                timeStamp = Time.time;
+                timeStamp = Time.timeSinceLevelLoad;
                 used = false;
                 
             }
                 
-                if(Time.time-timeStamp >pc.emissionEmitTime && !used)
+                if(Time.timeSinceLevelLoad-timeStamp >pc.emissionEmitTime && !used)
                 {
                 pc.PlayEmitSound();
                 pc.SetEmissionSystem(true);
@@ -282,7 +282,7 @@ namespace Dim.Player
 
         private bool EmissionToIdle()
         {
-            if (Time.time-timeStamp>pc.emissionEndTime)
+            if (Time.timeSinceLevelLoad-timeStamp>pc.emissionEndTime)
             {
                  pc.SetEmissionSystem(false);
                  return true;
@@ -295,11 +295,11 @@ namespace Dim.Player
 
             if (firstFrameOfStateChange)
             {
-                timeStamp = Time.time;
+                timeStamp = Time.timeSinceLevelLoad;
                 used = false;
             }
 
-            if (Time.time - timeStamp > pc.absorptionAbsorbTime && !used)
+            if (Time.timeSinceLevelLoad - timeStamp > pc.absorptionAbsorbTime && !used)
             {
                 pc.PlayAbsorbSound();
                 EnergyArea e = null;
@@ -320,7 +320,7 @@ namespace Dim.Player
 
         private bool AbsorptionToIdle()
         {
-            if (Time.time - timeStamp > pc.absorbtionEndTime)
+            if (Time.timeSinceLevelLoad - timeStamp > pc.absorbtionEndTime)
             {
                 //Disable absortion PS
                 return true;

@@ -32,9 +32,9 @@ namespace Dim.Player
         private void OnTriggerEnter(Collider other)
         {
            
-            if (other.tag == "Untagged" && Time.time-timeStamp >cooldown)
+            if (other.tag == "Untagged" && Time.timeSinceLevelLoad-timeStamp >cooldown)
             {
-                timeStamp = Time.time;
+                timeStamp = Time.timeSinceLevelLoad;
                 SoundMechanicHandler.PlaySound(transform, transform.position, Loudness, Range,false);
                 source.volume = Loudness / 10;
                 source.Play();

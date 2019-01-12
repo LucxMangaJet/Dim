@@ -24,7 +24,7 @@ namespace Dim
             GameObject g = Instantiate(destroyedObject, transform.position + new Vector3(0, -0.75f, 0), transform.rotation);
             g.transform.localScale = transform.lossyScale * scaleMultiplication;
 
-            if(gameObject == extraForceTarget && Time.time-extraForceTimeStamp < 1)
+            if(gameObject == extraForceTarget && Time.timeSinceLevelLoad-extraForceTimeStamp < 1)
             {
                 velocity += extraForce;
             }

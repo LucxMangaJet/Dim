@@ -51,12 +51,12 @@ namespace Dim.Enemies {
 
         private void CatchActivation()
         {
-            timestamp = Time.time;
+            timestamp = Time.timeSinceLevelLoad;
         }
 
         public  bool ShouldActivate()
         {
-            if (Time.time - timestamp < 0.2)
+            if (Time.timeSinceLevelLoad - timestamp < 0.2)
             {
                 return true;
             }

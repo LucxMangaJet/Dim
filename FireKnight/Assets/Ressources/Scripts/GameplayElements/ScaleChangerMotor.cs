@@ -23,7 +23,7 @@ namespace Dim.Interaction
             {
                 if (!active)
                 {
-                    if (Time.time < 2)
+                    if (Time.timeSinceLevelLoad < 2)
                     {
                         active = true;
                         return;
@@ -33,7 +33,7 @@ namespace Dim.Interaction
                     {
                         StopCoroutine(coroutine);
                     }
-                    coroutine = StartCoroutine(changeSize(true));
+                    coroutine = StartCoroutine(ChangeSize(true));
 
                     active = true;
                 }
@@ -46,14 +46,14 @@ namespace Dim.Interaction
                     {
                         StopCoroutine(coroutine);
                     }
-                    coroutine = StartCoroutine(changeSize(false));
+                    coroutine = StartCoroutine(ChangeSize(false));
                 }
                 active = false;
             }
         }
 
 
-        private IEnumerator changeSize(bool on)
+        private IEnumerator ChangeSize(bool on)
         {
             
             Vector3 nowSize = transform.localScale;

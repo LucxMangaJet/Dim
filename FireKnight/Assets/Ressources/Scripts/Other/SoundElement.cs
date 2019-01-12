@@ -79,7 +79,7 @@ namespace Dim {
         {
             Loudness = loudness;
             Origin = origin;
-            TimeStamp = Time.time;
+            TimeStamp = Time.timeSinceLevelLoad;
         }
 
 

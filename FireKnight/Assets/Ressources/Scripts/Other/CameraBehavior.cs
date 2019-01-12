@@ -206,7 +206,7 @@ namespace Dim.Player
             {
                 Vector3 previousPosition;
                 Vector3 previousRotation;
-                float counter = Time.time;
+                float counter = Time.timeSinceLevelLoad;
                 CutSceneTransition transition = c[i];
 
                 if (i == 0)
@@ -220,13 +220,13 @@ namespace Dim.Player
                     previousRotation = c[i - 1].GetRot();
                 }
 
-                while (Time.time - counter < transition.TimeToComplete)
+                while (Time.timeSinceLevelLoad - counter < transition.TimeToComplete)
                 {
-                    transform.position = Vector3.Lerp(previousPosition, transition.GetPos(), (Time.time - counter) / transition.TimeToComplete);
-                    transform.eulerAngles = GlobalMethods.LerpAngle(previousRotation, transition.GetRot(), (Time.time - counter) / transition.TimeToComplete);
+                    transform.position = Vector3.Lerp(previousPosition, transition.GetPos(), (Time.timeSinceLevelLoad - counter) / transition.TimeToComplete);
+                    transform.eulerAngles = GlobalMethods.LerpAngle(previousRotation, transition.GetRot(), (Time.timeSinceLevelLoad - counter) / transition.TimeToComplete);
                     yield return null;
                     if(debug)
-                    Debug.Log("Transition #" + i + " TimeLeft: " + (transition.TimeToComplete - (Time.time - counter)));
+                    Debug.Log("Transition #" + i + " TimeLeft: " + (transition.TimeToComplete - (Time.timeSinceLevelLoad - counter)));
                 }
             }
 

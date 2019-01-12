@@ -29,7 +29,7 @@ namespace Dim
         {
             bC = GetComponent<BoxCollider>();
             pS = GetComponent<ParticleSystem>();
-            timestamp = Time.time;
+            timestamp = Time.timeSinceLevelLoad;
         }
 
         private void Return()
@@ -105,7 +105,7 @@ namespace Dim
             return new string[]
             {
                 "Energy: " + Energy,
-                "TimeLeft:" + (LIFETIME - (Time.time-timestamp))
+                "TimeLeft:" + (LIFETIME - (Time.timeSinceLevelLoad-timestamp))
             };
         }
     }

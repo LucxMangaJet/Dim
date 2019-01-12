@@ -23,7 +23,7 @@ namespace Dim {
             if (Mathf.Abs(collision.relativeVelocity.y) > requiredVerticalSpeed)
             {
 
-                VisualDestructionHandler.extraForceTimeStamp = Time.time;
+                VisualDestructionHandler.extraForceTimeStamp = Time.timeSinceLevelLoad;
                 VisualDestructionHandler.extraForce = -collision.relativeVelocity;
                 VisualDestructionHandler.extraForceTarget = gameObject;
                 

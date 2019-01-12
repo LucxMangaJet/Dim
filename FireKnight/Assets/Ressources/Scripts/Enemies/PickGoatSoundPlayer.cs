@@ -29,9 +29,9 @@ namespace Dim.Enemies
         private void OnTriggerEnter(Collider other)
         {
 
-            if (other.tag == "Untagged" && Time.time - timeStamp > cooldown)
+            if (other.tag == "Untagged" && Time.timeSinceLevelLoad - timeStamp > cooldown)
             {
-                timeStamp = Time.time;
+                timeStamp = Time.timeSinceLevelLoad;
                 // SoundMechanicHandler.PlaySound(transform, transform.position, Loudness, Range, false);
                 source.Play();
             }
@@ -41,7 +41,7 @@ namespace Dim.Enemies
         {
             return new string[]
             {
-                Mathf.Max(Time.time-timeStamp,0).ToString()
+                Mathf.Max(Time.timeSinceLevelLoad-timeStamp,0).ToString()
             };
         }
     }

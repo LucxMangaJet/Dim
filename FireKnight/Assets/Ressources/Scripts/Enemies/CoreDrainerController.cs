@@ -134,7 +134,7 @@ namespace Dim.Enemies
         {
             if (LastSoundHeard != null)
             {
-                if ((Time.time - LastSoundHeard.TimeStamp) > SoundInterestLength)
+                if ((Time.timeSinceLevelLoad - LastSoundHeard.TimeStamp) > SoundInterestLength)
                 {
                     LastSoundHeard = null;
                 }
@@ -162,12 +162,12 @@ namespace Dim.Enemies
                 return;
             }
 
-            if(Time.time- hearingTimeStamp < HearingCoolDown)
+            if(Time.timeSinceLevelLoad- hearingTimeStamp < HearingCoolDown)
             {
                 return;
             }
 
-            hearingTimeStamp = Time.time;
+            hearingTimeStamp = Time.timeSinceLevelLoad;
 
 
             if (LastSoundHeard == null)

@@ -34,7 +34,7 @@ namespace Dim.Interaction {
                 {
                     active = true;
 
-                    if (Time.time < 0.5)
+                    if (Time.timeSinceLevelLoad < 0.5)
                     {
                         return;
                     }
