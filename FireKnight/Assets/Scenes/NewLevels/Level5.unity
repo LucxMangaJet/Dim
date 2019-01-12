@@ -10713,13 +10713,13 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 516316961}
-  m_LocalRotation: {x: -0.13390404, y: 0.041199587, z: -0.007173823, w: 0.9901116}
+  m_LocalRotation: {x: -0.18074046, y: 0.041493613, z: -0.0052105463, w: 0.9826414}
   m_LocalPosition: {x: -0.0000005913717, y: 3.3800008, z: 2.1500003}
   m_LocalScale: {x: 1.0000007, y: 1.000001, z: 1.0000012}
   m_Children: []
   m_Father: {fileID: 1747183232}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: -15.341001, y: 4.9680004, z: -1.5000001}
+  m_LocalEulerAnglesHint: {x: -20.78, y: 5.1200004, z: -1.547}
 --- !u!114 &516316963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30916,11 +30916,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4352941791553904, guid: e91689235616f9045a6a26e625db7099, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 78
+      value: 80.28
       objectReference: {fileID: 0}
     - target: {fileID: 4352941791553904, guid: e91689235616f9045a6a26e625db7099, type: 2}
       propertyPath: m_LocalPosition.z
-      value: -4.9
+      value: -8.84
       objectReference: {fileID: 0}
     - target: {fileID: 4352941791553904, guid: e91689235616f9045a6a26e625db7099, type: 2}
       propertyPath: m_LocalRotation.x
@@ -32418,22 +32418,22 @@ Prefab:
     - target: {fileID: 114851358291780842, guid: 70214b249bba0cd4dac3584ffc1dc735,
         type: 2}
       propertyPath: Rotation.y
-      value: 335.0311
+      value: 20.031076
       objectReference: {fileID: 0}
     - target: {fileID: 114851358291780842, guid: 70214b249bba0cd4dac3584ffc1dc735,
         type: 2}
       propertyPath: StaticPos.x
-      value: 119.76
+      value: 114.87
       objectReference: {fileID: 0}
     - target: {fileID: 114851358291780842, guid: 70214b249bba0cd4dac3584ffc1dc735,
         type: 2}
       propertyPath: StaticPos.y
-      value: 29.84
+      value: 30.78
       objectReference: {fileID: 0}
     - target: {fileID: 114851358291780842, guid: 70214b249bba0cd4dac3584ffc1dc735,
         type: 2}
       propertyPath: StaticPos.z
-      value: -15.55
+      value: -13.76
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 70214b249bba0cd4dac3584ffc1dc735, type: 2}
