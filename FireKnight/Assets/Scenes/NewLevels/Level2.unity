@@ -28424,7 +28424,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a2093eb91baae324ab828cd139e9d7ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDist: 10
+  maxDist: 4
   animationCurve:
     serializedVersion: 2
     m_Curve:
