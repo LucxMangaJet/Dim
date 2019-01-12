@@ -1575,6 +1575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 413929542}
+  mixer: {fileID: 24100000, guid: abcee07bc655fe947943e93575f62660, type: 2}
 --- !u!1 &235001831
 GameObject:
   m_ObjectHideFlags: 0

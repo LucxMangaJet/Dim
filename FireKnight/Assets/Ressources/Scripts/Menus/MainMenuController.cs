@@ -28,9 +28,14 @@ namespace Dim.Menu
         UserData userData;
         bool preparingNewGame = false;
 
+        FaderEffect fader;
+
         void Start()
         {
             userData = GlobalMethods.LoadUserDataFromFile();
+
+            fader = GetComponent<FaderEffect>();
+            fader.FadeIn(Color.black, 3);
 
             //resDropdown
             resolutions = Screen.resolutions;
@@ -136,8 +141,14 @@ namespace Dim.Menu
                 preparingNewGame = true;
                 mainDoorAnimationObj.GetComponent<Animator>().Play("MainDoor");
                 mainDoorAnimationObj.GetComponent<AudioSource>().Play();
+                Invoke("FadeOut", 12);
                 Invoke("LoadIntro", 16);
             }
+        }
+
+        private void FadeOut()
+        {
+            fader.FadeOut(Color.black, 4);
         }
 
         private void LoadIntro()

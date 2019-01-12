@@ -18,7 +18,7 @@ namespace Dim.Menu
 
         private void Start()
         {
-            GetComponent<FaderEffect>().FadeIn(Color.white, 15);
+            GetComponent<FaderEffect>().FadeIn(Color.white, 8);
         }
 
         //quit
