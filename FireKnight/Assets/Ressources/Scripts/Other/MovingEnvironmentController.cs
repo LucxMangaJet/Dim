@@ -22,7 +22,7 @@ namespace Dim
         // Update is called once per frame
         void Update()
         {
-            transform.Rotate(customRotation * speed);
+            transform.Rotate(customRotation * speed*Time.deltaTime*60);
         }
     }
 
