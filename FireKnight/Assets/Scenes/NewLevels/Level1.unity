@@ -7877,7 +7877,7 @@ Prefab:
     - target: {fileID: 114191326141666622, guid: 7db7ee3ac70176d43b30e854e778408e,
         type: 2}
       propertyPath: platformEnergyPositions.Array.data[0].y
-      value: -5
+      value: -4.97
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7db7ee3ac70176d43b30e854e778408e, type: 2}
@@ -14198,7 +14198,7 @@ Prefab:
     - target: {fileID: 114652724488670820, guid: 2f097c2e721a9de4abb5de6fea6a9ecd,
         type: 2}
       propertyPath: camDistZ
-      value: 8
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114652724488670820, guid: 2f097c2e721a9de4abb5de6fea6a9ecd,
         type: 2}
@@ -19095,7 +19095,7 @@ Prefab:
     - target: {fileID: 114652724488670820, guid: 2f097c2e721a9de4abb5de6fea6a9ecd,
         type: 2}
       propertyPath: camDistZ
-      value: 2
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 114652724488670820, guid: 2f097c2e721a9de4abb5de6fea6a9ecd,
         type: 2}
@@ -19111,6 +19111,46 @@ Prefab:
         type: 2}
       propertyPath: StartingMovingDirectionIsForward
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114652724488670820, guid: 2f097c2e721a9de4abb5de6fea6a9ecd,
+        type: 2}
+      propertyPath: portNameConnections.Array.data[2]
+      value: Start3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114652724488670820, guid: 2f097c2e721a9de4abb5de6fea6a9ecd,
+        type: 2}
+      propertyPath: portNameConnections.Array.data[3]
+      value: Start3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114652724488670820, guid: 2f097c2e721a9de4abb5de6fea6a9ecd,
+        type: 2}
+      propertyPath: portNameConnections.Array.data[4]
+      value: Start3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114652724488670820, guid: 2f097c2e721a9de4abb5de6fea6a9ecd,
+        type: 2}
+      propertyPath: portNameConnections.Array.data[5]
+      value: Start3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114652724488670820, guid: 2f097c2e721a9de4abb5de6fea6a9ecd,
+        type: 2}
+      propertyPath: portNameConnections.Array.data[6]
+      value: Start3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114652724488670820, guid: 2f097c2e721a9de4abb5de6fea6a9ecd,
+        type: 2}
+      propertyPath: portNameConnections.Array.data[7]
+      value: Start3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114652724488670820, guid: 2f097c2e721a9de4abb5de6fea6a9ecd,
+        type: 2}
+      propertyPath: portNameConnections.Array.data[8]
+      value: Start3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114652724488670820, guid: 2f097c2e721a9de4abb5de6fea6a9ecd,
+        type: 2}
+      propertyPath: portNameConnections.Array.data[9]
+      value: Start3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f097c2e721a9de4abb5de6fea6a9ecd, type: 2}
