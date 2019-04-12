@@ -223,7 +223,7 @@ namespace Dim.Player
 
         private bool HasToJump()
         {
-            if (InputController.GetJump(InputStateType.JUST_PRESSED) && pc.OnGround)
+            if (InputController.GetJump(InputStateType.JUST_PRESSED) && pc.OnGround && pc.transform.parent == null)
             {
                 return true;
             }
