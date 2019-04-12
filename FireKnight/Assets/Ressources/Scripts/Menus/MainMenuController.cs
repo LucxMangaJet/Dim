@@ -67,6 +67,11 @@ namespace Dim.Menu
 
             //cursor
             Cursor.visible = true;
+            //mixer bugs
+
+            PrefabHolder.MainMixer().ClearFloat("MasterLowPass");
+            PrefabHolder.MainMixer().ClearFloat("MasterPitch");
+            PrefabHolder.MainMixer().ClearFloat("MasterEcho");
 
         }
 
