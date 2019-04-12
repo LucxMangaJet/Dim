@@ -26091,6 +26091,7 @@ MonoBehaviour:
   continueObject: {fileID: 1404367768}
   resDropdown: {fileID: 951196149}
   mainDoorAnimationObj: {fileID: 352559360}
+  mainMenuCanvas: {fileID: 244487569}
 --- !u!4 &1791993545
 Transform:
   m_ObjectHideFlags: 0

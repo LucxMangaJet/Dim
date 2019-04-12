@@ -21,6 +21,7 @@ namespace Dim.Menu
         //relsolutions
         [SerializeField] Dropdown resDropdown;
         [SerializeField] GameObject mainDoorAnimationObj;
+        [SerializeField] GameObject mainMenuCanvas;
 
         Resolution[] resolutions;
 
@@ -62,6 +63,10 @@ namespace Dim.Menu
             //LevelSelection
             FindAviableLevels();
             DisplayAviableLevles();
+
+
+            //cursor
+            Cursor.visible = true;
 
         }
 
@@ -130,6 +135,7 @@ namespace Dim.Menu
         //continue 
         public void Continue()
         {
+            Cursor.visible = false;
             GlobalMethods.LoadFromSaveFile();
         }
 
@@ -140,6 +146,8 @@ namespace Dim.Menu
                 preparingNewGame = true;
                 mainDoorAnimationObj.GetComponent<Animator>().Play("MainDoor");
                 mainDoorAnimationObj.GetComponent<AudioSource>().Play();
+                mainMenuCanvas.SetActive(false);
+                Cursor.visible = false;
                 Invoke("FadeOut", 12);
                 Invoke("LoadIntro", 16);
             }

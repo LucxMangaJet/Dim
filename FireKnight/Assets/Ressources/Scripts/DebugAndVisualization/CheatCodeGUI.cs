@@ -32,14 +32,20 @@ namespace Dim.Visualize
         public void Toggle()
         {
             enabled = !enabled;
+
+            if (enabled)
+            {
+                Cursor.visible = true;
+            }
+            else
+            {
+                Cursor.visible = false;
+            }
         }
 
         void OnEnable()
         {
             Application.logMessageReceived += HandleLog;
-
-
-
         }
 
         private void Start()
